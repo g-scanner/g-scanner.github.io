@@ -1,0 +1,348 @@
+html {
+    scroll-behavior: smooth;
+}
+
+/* =========================================
+   SCROLLBAR STYLING (Material 3 Adattivo)
+   ========================================= */
+
+/* 1. Standard per Firefox */
+html {
+    scrollbar-width: thin;
+    scrollbar-color: #BFCABA #F5F3F7;
+}
+
+html.dark {
+    scrollbar-color: #40493D #151517;
+}
+
+/* 2. WebKit per Chrome, Edge, Safari */
+::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+
+/* Sfondo della scrollbar (Track) */
+::-webkit-scrollbar-track {
+    background: #F5F3F7; /* Sfondo chiaro */
+}
+html.dark ::-webkit-scrollbar-track {
+    background: #151517; /* Sfondo scuro */
+}
+
+/* Barra scorrevole (Thumb) */
+::-webkit-scrollbar-thumb {
+    background-color: #BFCABA;
+    border-radius: 20px;
+    border: 3px solid #F5F3F7; /* Crea un finto margine intorno per renderla più fine */
+}
+html.dark ::-webkit-scrollbar-thumb {
+    background-color: #40493D;
+    border: 3px solid #151517; /* Stesso colore del track scuro per l'effetto margine */
+}
+
+/* Hover della barra scorrevole */
+::-webkit-scrollbar-thumb:hover {
+    background-color: #8B9389; /* Più scuro in light mode */
+}
+html.dark ::-webkit-scrollbar-thumb:hover {
+    background-color: #C1C9BE; /* Più chiaro in dark mode */
+}
+
+/* Material 3 Easing & Animations */
+.ease-m3 {
+    transition-timing-function: cubic-bezier(0.2, 0, 0, 1);
+}
+
+.fade-up {
+    opacity: 0;
+    transform: translateY(30px) scale(0.98);
+    transition: opacity 0.8s cubic-bezier(0.2, 0, 0, 1), transform 0.8s cubic-bezier(0.2, 0, 0, 1);
+}
+.fade-up.visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+/* --- NUOVI EFFETTI DI SCROLLING --- */
+
+/* 1. Fade Blur In (Effetto Vetro/Serio per Disclaimer) */
+.fade-blur-in {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(20px) scale(0.98);
+    transition: opacity 0.7s cubic-bezier(0.2, 0, 0, 1),
+                filter 0.7s cubic-bezier(0.2, 0, 0, 1),
+                transform 0.7s cubic-bezier(0.2, 0, 0, 1);
+}
+.fade-blur-in.visible {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0) scale(1);
+}
+
+/* 2. Fly In 3D (Ingresso Teatrale per la Card "About") */
+.fly-in-3d {
+    opacity: 0;
+    transform: translateY(60px) rotateX(15deg) scale(0.92);
+    transition: opacity 0.9s cubic-bezier(0.34, 1.56, 0.64, 1),
+                transform 0.9s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transform-origin: center bottom;
+}
+.fly-in-3d.visible {
+    opacity: 1;
+    transform: translateY(0) rotateX(0) scale(1);
+}
+
+/* 3. Pop-in con Rimbalzo (Ideale per Icone/CTA) */
+.pop-in {
+    opacity: 0;
+    transform: scale(0.4) translateY(20px);
+    transition: opacity 0.6s cubic-bezier(0.34, 1.56, 0.64, 1),
+                transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.pop-in.visible {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+}
+
+/* 4. Slide Up Bounce (Per il Bottone di Download) */
+.slide-up-bounce {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease-out, transform 0.8s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.slide-up-bounce.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 5. Footer Reveal con Staggering */
+.footer-reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s cubic-bezier(0.2, 0, 0, 1);
+}
+.footer-reveal.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.footer-reveal .stagger-item {
+    opacity: 0;
+    transform: translateY(15px);
+    transition: opacity 0.6s ease-out, transform 0.6s cubic-bezier(0.2, 0, 0, 1);
+}
+.footer-reveal.visible .stagger-item {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Ritardi predefiniti per i figli (effetto a cascata) */
+.footer-reveal.visible .stagger-item:nth-child(1) { transition-delay: 0.1s; }
+.footer-reveal.visible .stagger-item:nth-child(2) { transition-delay: 0.25s; }
+.footer-reveal.visible .stagger-item:nth-child(3) { transition-delay: 0.4s; }
+
+/* ---------------------------------- */
+
+/* =========================================
+   FIX MENU A TENDINA (ACCESSIBILITÀ TASTIERA)
+   ========================================= */
+/* Rimuove completamente le voci dal tab-order quando il menu è chiuso */
+#lang-dropdown.opacity-0 {
+    visibility: hidden;
+    /* Aspetta 0.3s (la fine del fade-out) prima di nasconderlo, così l'animazione è fluida */
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s 0.3s;
+}
+
+#lang-dropdown:not(.opacity-0) {
+    visibility: visible;
+    /* Appena si apre, diventa subito visibile per mostrare l'animazione di entrata */
+    transition: opacity 0.3s ease, transform 0.3s ease, visibility 0s 0s;
+}
+
+/* =========================================
+   FOCUS RING ARROTONDATO E ADERENTE (TAB)
+   ========================================= */
+.m3-card:focus-visible,
+.anti-jitter:focus-visible,
+button:focus-visible,
+a:focus-visible {
+    /* Rimuove l'orribile riquadro quadrato nativo del browser */
+    outline: none !important; 
+    
+    /* Crea un finto anello usando due ombre: 
+       la prima (2px) fa da spaziatura del colore dello sfondo, 
+       la seconda (5px) è l'anello verde vero e proprio. 
+       Il box-shadow eredita SEMPRE e perfettamente il border-radius! */
+    box-shadow: 0 0 0 2px #FAF9FC, 0 0 0 5px #0D631B !important;
+}
+
+/* Colori adattati per la Dark Mode */
+html.dark .m3-card:focus-visible,
+html.dark .anti-jitter:focus-visible,
+html.dark button:focus-visible,
+html.dark a:focus-visible {
+    box-shadow: 0 0 0 2px #121214, 0 0 0 5px #81D683 !important;
+}
+
+/* Hover elevation for M3 Cards */
+.m3-card {
+    transition: box-shadow 0.3s cubic-bezier(0.2, 0, 0, 1), transform 0.3s cubic-bezier(0.2, 0, 0, 1);
+}
+
+.m3-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px -4px rgba(0, 0, 0, 0.08);
+}
+
+.dark .m3-card:hover {
+    box-shadow: 0 12px 24px -4px rgba(0, 0, 0, 0.4);
+}
+
+/* =========================================
+   ANTI-JITTER FIX MIGLIORATO
+   ========================================= */
+
+.m3-card,
+.anti-jitter {
+    position: relative;
+}
+
+/* 1. Creiamo un'area invisibile piccolissima (6px) sotto l'elemento. */
+.m3-card::after,
+.anti-jitter::after {
+    content: '';
+    position: absolute;
+    bottom: -6px; /* Copre solo i 4px di scatto (translateY) + 2px di sicurezza */
+    left: 0;
+    right: 0;
+    height: 6px;
+    background: transparent;
+    pointer-events: none; /* FONDAMENTALE: A riposo questa zona NON è cliccabile. L'hitbox è precisissimo. */
+}
+
+/* 2. L'area diventa solida solo DURANTE l'hover per mantenere agganciato il mouse quando l'elemento sale */
+.m3-card:hover::after,
+.anti-jitter:hover::after,
+.m3-card:focus-within::after,
+.anti-jitter:focus-within::after {
+    pointer-events: auto;
+}
+
+/* 3D Flip Card for Easter Egg */
+.perspective-1000 {
+    perspective: 1000px;
+}
+
+.transform-style-3d {
+    transform-style: preserve-3d;
+}
+
+.backface-hidden {
+    backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+    transform: rotateY(180deg);
+}
+
+.flip-transition {
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Waving Hand Animation Definition */
+@keyframes wave-hand {
+    0%,
+    100% {
+        transform: rotate(0deg);
+    }
+    20% {
+        transform: rotate(16deg);
+    }
+    40% {
+        transform: rotate(-10deg);
+    }
+    60% {
+        transform: rotate(14deg);
+    }
+    80% {
+        transform: rotate(-4deg);
+    }
+}
+
+.animate-hand-once {
+    animation: wave-hand 1.2s ease-in-out;
+    transform-origin: bottom center;
+}
+
+/* ----- ANIMAZIONI SCANNER AVANZATE ----- */
+.barcode-enter {
+    opacity: 0;
+    transform: translateY(30px) scale(0.9);
+    transition: all 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.barcode-visible {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+}
+
+.front-ui {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.dim-front-ui {
+    opacity: 0;
+    transform: scale(0.95);
+}
+
+.success-overlay-enter {
+    opacity: 0;
+    transform: scale(0.98);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.show-success-overlay {
+    opacity: 1;
+    transform: scale(1);
+    pointer-events: auto;
+}
+
+.success-icon {
+    transform: scale(0);
+    opacity: 0;
+    transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.show-success-overlay .success-icon {
+    transform: scale(1);
+    opacity: 1;
+    transition: transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.15s, opacity 0.4s ease 0.15s;
+}
+
+/* Hero Organic Background Animations */
+@keyframes morph {
+    0% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    50% {
+        border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%;
+    }
+    100% {
+        border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+}
+
+.bg-blob {
+    animation: morph 8s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="es" class="light">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Base SEO -->
+    <title>G-Scanner - App Gratis de Alimentos Sin Gluten y Lactosa</title>
+    <meta name="description" content="Verifica la seguridad de los productos en segundos. Escanea el código de barras y descubre al instante si contiene gluten, aditivos sospechosos o lactosa. 100% Gratis.">
+    <meta name="keywords" content="escáner de alimentos, app celíacos, sin gluten, intolerancia a la lactosa, open food facts, escáner de ingredientes, escáner código de barras">
+    <meta name="author" content="Emanuele Ciotola">
+    <meta name="theme-color" content="#BFDEB4">
+    <link rel="icon" href="../assets/logo/favicon.ico" sizes="16x16 32x32 48x48">
+    <link rel="icon" href="../assets/logo/icon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="../assets/logo/apple-touch-icon.png">
+    <link rel="manifest" href="../site.webmanifest">
+    
+    <!-- Canonical & Hreflang -->
+    <link rel="canonical" href="https://g-scanner.github.io/es/">
+    <link rel="alternate" hreflang="en" href="https://g-scanner.github.io">
+    <link rel="alternate" hreflang="it" href="https://g-scanner.github.io/it/">
+    <link rel="alternate" hreflang="es" href="https://g-scanner.github.io/es/">
+    <link rel="alternate" hreflang="de" href="https://g-scanner.github.io/de/">
+    <link rel="alternate" hreflang="fr" href="https://g-scanner.github.io/fr/">
+    <link rel="alternate" hreflang="x-default" href="https://g-scanner.github.io">
+
+    <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://g-scanner.github.io/es/">
+    <meta property="og:title" content="G-Scanner - App Gratis de Alimentos Sin Gluten y Lactosa">
+    <meta property="og:description" content="Escanea el código de barras para detectar gluten, lactosa y aditivos al instante. Creada para tu salud. 100% Gratis y sin publicidad.">
+    <meta property="og:image" content="https://g-scanner.github.io/assets/seo-banner.png">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="G-Scanner - App Gratis de Alimentos Sin Gluten y Lactosa">
+    <meta name="twitter:description" content="Verifica gluten, lactosa y aditivos escaneando códigos de barras. Cero publicidad, máxima privacidad.">
+    <meta name="twitter:image" content="https://g-scanner.github.io/assets/seo-banner.png">
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "G-Scanner",
+      "url": "https://g-scanner.github.io/es/",
+      
+      "description": "Escanea códigos de barras de alimentos para descubrir al instante la presencia de gluten, aditivos sospechosos o lactosa. Gratuita y sin publicidad.",
+      "applicationCategory": "HealthAndFitnessApplication",
+      "operatingSystem": "Web, Android",
+
+      "offers": {
+        "@type": "Offer",
+        "price": "0.00",
+        "priceCurrency": "EUR"
+      },
+      "featureList": [
+        "Escaneo de códigos de barras",
+        "Integración con Open Food Facts",
+        "Filtro estricto de gluten para celíacos",
+        "Filtro de intolerancia a la lactosa",
+        "Aviso de aditivos sospechosos",
+        "Sistema de semáforo (Verde, Amarillo, Rojo)",
+        "Sin anuncios, centrada en la privacidad"
+      ],
+
+      "termsOfService": "https://g-scanner.github.io/TerminosYCondiciones.html",
+      "privacyPolicy": "https://g-scanner.github.io/PoliticaDePrivacidad.html"
+    }
+    </script>
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Tailwind Config -->
+    <script>
+        tailwind.config = { darkMode: 'class', theme: { extend: { fontFamily: { sans: ['Outfit', 'sans-serif'], }, colors: { md: { sys: { color: { primary: { light: '#0D631B', dark: '#81D683' }, onPrimary: { light: '#FFFFFF', dark: '#00390E' }, primaryContainer: { light: '#2E7D32', dark: '#065314' }, onPrimaryContainer: { light: '#FFFFFF', dark: '#9DF49E' }, surface: { light: '#FAF9FC', dark: '#121214' }, onSurface: { light: '#1B1B1E', dark: '#E4E2E6' }, surfaceVariant: { light: '#EFEDF1', dark: '#242528' }, onSurfaceVariant: { light: '#40493D', dark: '#C1C9BE' }, outline: { light: '#BFCABA', dark: '#8B9389' }, secondaryContainer: { light: '#54A0FE', dark: '#004886' }, onSecondaryContainer: { light: '#003567', dark: '#D0E4FF' }, tertiaryContainer: { light: '#AD5600', dark: '#FFB68A' }, onTertiaryContainer: { light: '#FFFFFF', dark: '#5C2D00' }, error: { light: '#BA1A1A', dark: '#FFB4AB' }, errorContainer: { light: '#FFDAD6', dark: '#93000A' }, onErrorContainer: { light: '#410002', dark: '#FFDAD6' } } } } } } } }
+    </script>
+
+    <!-- Google Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL,GRAD,opsz@400,0..1,0,24" rel="stylesheet" />
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="../style.css">
+    
+    <!-- External JS -->
+    <script src="../script.js" defer></script>
+</head>
+
+<body class="bg-md-sys-color-surface-light dark:bg-md-sys-color-surface-dark text-md-sys-color-onSurface-light dark:text-md-sys-color-onSurface-dark antialiased transition-colors duration-500 ease-m3 selection:bg-md-sys-color-primaryContainer-light selection:text-md-sys-color-onPrimaryContainer-light overflow-x-hidden">
+
+    <!-- FLOATING NAVBAR -->
+    <nav class="fixed top-4 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-6xl bg-md-sys-color-surface-light/60 dark:bg-md-sys-color-surface-dark/60 backdrop-blur-2xl border border-[#E9E7EB] dark:border-[#2A2B2E] rounded-full px-4 py-3 flex items-center justify-between z-50 shadow-sm ease-m3 transition-all">
+        <div class="flex items-center gap-2 pl-2 cursor-pointer" onclick="window.scrollTo(0,0)">
+            <div class="w-8 h-8 text-md-sys-color-onPrimary-light dark:text-md-sys-color-onPrimary-dark rounded-full flex items-center justify-center transition-transform hover:rotate-[-31deg]">
+                <img src="../assets/logo/app_icon_solid.png" alt="G-Scanner App Logo" class="w-20px h-20px rounded-full object-cover" />
+            </div>
+            <span class="font-bold text-lg tracking-tight hidden sm:block">G-Scanner</span>
+        </div>
+
+        <div class="flex items-center gap-2 sm:gap-4">
+            <!-- Language Selector -->
+            <div class="relative" id="lang-menu-container">
+                <button id="lang-menu-btn" class="flex items-center bg-transparent border border-[#E9E7EB] dark:border-[#2A2B2E] rounded-full px-3 py-1.5 hover:bg-[#F5F3F7] dark:hover:bg-[#242528] transition-colors cursor-pointer group" aria-expanded="false" aria-label="Seleccionar idioma">
+                    <span translate="no" class="material-symbols-outlined text-sm mr-1 text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark" aria-hidden="true">language</span>
+                    <span class="text-sm font-medium text-md-sys-color-onSurface-light dark:text-md-sys-color-onSurface-dark pr-4">ES</span>
+                    <span id="lang-menu-chevron" translate="no" class="material-symbols-outlined text-[16px] absolute right-2 pointer-events-none text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark transition-transform duration-300 ease-m3" aria-hidden="true">expand_more</span>
+                </button>
+
+                <div id="lang-dropdown" class="absolute top-full right-0 mt-2 w-44 bg-white dark:bg-[#1B1B1E] border border-[#E9E7EB] dark:border-[#2A2B2E] rounded-[1.25rem] shadow-xl opacity-0 scale-95 pointer-events-none transition-all duration-300 ease-m3 z-50 overflow-hidden transform origin-top-right">
+                    <div class="py-2 flex flex-col">
+                        <a href="../" class="px-5 py-2.5 text-sm font-medium hover:bg-[#F5F3F7] dark:hover:bg-[#242528] text-md-sys-color-onSurface-light dark:text-md-sys-color-onSurface-dark transition-colors flex items-center justify-between">
+                            English
+                        </a>
+                        <a href="../it/" class="px-5 py-2.5 text-sm font-medium hover:bg-[#F5F3F7] dark:hover:bg-[#242528] text-md-sys-color-onSurface-light dark:text-md-sys-color-onSurface-dark transition-colors flex items-center justify-between">
+                            Italiano
+                        </a>
+                        <div class="px-5 py-2.5 text-sm font-bold bg-[#E2F4E3] dark:bg-[#065314]/40 text-[#0D631B] dark:text-[#81D683] flex items-center justify-between cursor-default">
+                            Español
+                            <span translate="no" class="material-symbols-outlined text-[18px]" aria-hidden="true">check</span>
+                        </div>
+                        <a href="../de/" class="px-5 py-2.5 text-sm font-medium hover:bg-[#F5F3F7] dark:hover:bg-[#242528] text-md-sys-color-onSurface-light dark:text-md-sys-color-onSurface-dark transition-colors flex items-center justify-between">
+                            Deutsch
+                        </a>
+                        <a href="../fr/" class="px-5 py-2.5 text-sm font-medium hover:bg-[#F5F3F7] dark:hover:bg-[#242528] text-md-sys-color-onSurface-light dark:text-md-sys-color-onSurface-dark transition-colors flex items-center justify-between">
+                            Français
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Theme Toggle -->
+            <button id="theme-toggle" class="p-2 rounded-full flex items-center justify-center hover:bg-[#F5F3F7] dark:hover:bg-[#242528] transition-colors ease-m3" aria-label="Toggle Dark Mode">
+                <span translate="no" class="material-symbols-outlined block dark:hidden leading-none" aria-hidden="true">dark_mode</span>
+                <span translate="no" class="material-symbols-outlined hidden dark:block text-md-sys-color-primary-dark leading-none" aria-hidden="true">light_mode</span>
+            </button>
+
+            <!-- Launch App CTA -->
+            <a href="https://g-scanner.github.io/webapp/" class="hidden sm:flex bg-md-sys-color-primary-light dark:bg-md-sys-color-primary-dark text-md-sys-color-onPrimary-light dark:text-md-sys-color-onPrimary-dark px-5 py-2 rounded-full font-medium text-sm items-center gap-2 hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 transition-all ease-m3 anti-jitter">
+                Abrir WebApp
+                <span translate="no" class="material-symbols-outlined text-[18px]" aria-hidden="true">open_in_new</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <header class="relative pt-40 pb-24 px-6 min-h-[95vh] flex flex-col items-center justify-center">
+        <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+            <div class="bg-blob absolute top-[-5%] -left-20 w-[600px] h-[600px] bg-blue-100/60 dark:bg-[#003567]/30 blur-[90px] mix-blend-multiply dark:mix-blend-lighten"></div>
+            <div class="bg-blob absolute top-[43%] -right-20 w-[500px] h-[500px] bg-[#2E7D32]/25 dark:bg-[#065314]/40 blur-[100px] mix-blend-multiply dark:mix-blend-lighten" style="animation-delay: 2s;"></div>
+        </div>
+
+        <div class="relative z-10 w-full max-w-3xl mx-auto text-center mb-16">
+            <h1 class="fade-up text-5xl md:text-7xl font-bold tracking-tight mb-6 text-md-sys-color-onSurface-light dark:text-md-sys-color-onSurface-dark leading-[1.1]">
+                El escáner de alimentos <br class="hidden sm:block" /> creado para protegerte.
+            </h1>
+            <p class="fade-up text-lg md:text-xl text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark mb-10 leading-relaxed" style="transition-delay: 100ms;">
+                Verifica en segundos si los productos contienen gluten, aditivos sospechosos o lactosa.
+                Sin publicidad. Sin rastreo. Una app 100% gratuita para tu tranquilidad.
+            </p>
+
+            <div class="fade-up flex flex-col sm:flex-row items-center justify-center gap-4" style="transition-delay: 200ms;">
+                <a href="https://g-scanner.github.io/webapp/" class="anti-jitter w-full sm:w-auto bg-md-sys-color-primary-light dark:bg-md-sys-color-primary-dark text-md-sys-color-onPrimary-light dark:text-md-sys-color-onPrimary-dark px-8 py-4 rounded-full font-semibold text-lg flex items-center justify-center gap-2 hover:shadow-lg hover:-translate-y-1 transition-all ease-m3">
+                    <span translate="no" class="material-symbols-outlined" aria-hidden="true">globe</span>
+                    Iniciar WebApp
+                </a>
+                <a href="#download-section" class="anti-jitter w-full sm:w-auto bg-white/50 dark:bg-[#1B1B1E]/40 backdrop-blur-md text-md-sys-color-onSurface-light dark:text-md-sys-color-onSurface-dark px-8 py-4 rounded-full font-semibold text-lg flex items-center justify-center gap-2 hover:bg-white/80 dark:hover:bg-[#242528]/80 hover:-translate-y-1 transition-all ease-m3 border border-[#E9E7EB] dark:border-[#2A2B2E]">
+                    <span translate="no" class="material-symbols-outlined" aria-hidden="true">android</span>
+                    Descargar App
+                </a>
+            </div>
+        </div>
+
+        <div class="relative z-10 w-full max-w-[420px] fade-up" style="transition-delay: 300ms;">
+            <div id="full-scanner-container" class="relative w-full h-[460px]">
+                <div class="relative w-full h-full bg-white dark:bg-[#121214] rounded-[2.5rem] shadow-2xl border border-[#E9E7EB] dark:border-[#2A2B2E] overflow-hidden">
+
+                    <div id="front-ui" class="absolute inset-0 flex flex-col p-6 pb-8 front-ui origin-center z-10 bg-white dark:bg-[#121214]">
+                        <div class="text-center mb-6 mt-2">
+                            <h2 class="font-bold text-2xl md:text-3xl text-gray-900 dark:text-gray-100 tracking-tight">Escanear Producto</h2>
+                            <p class="text-[15px] text-gray-600 dark:text-gray-400 mt-2 leading-snug px-4">Alinea el código de barras en el recuadro.</p>
+                        </div>
+
+                        <div class="relative w-full aspect-video mb-6 bg-[#000000] rounded-[2rem] overflow-hidden flex items-center justify-center shadow-inner border border-gray-800">
+                            <div class="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=600&auto=format&fit=crop')] bg-cover bg-center opacity-30 blur-[4px]"></div>
+                            <div class="absolute inset-4 overflow-hidden pointer-events-none z-10">
+                                <div class="absolute top-0 left-0 w-8 h-8 border-t-[3px] border-l-[3px] border-green-500 rounded-tl-xl opacity-80"></div>
+                                <div class="absolute top-0 right-0 w-8 h-8 border-t-[3px] border-r-[3px] border-green-500 rounded-tr-xl opacity-80"></div>
+                                <div class="absolute bottom-0 left-0 w-8 h-8 border-b-[3px] border-l-[3px] border-green-500 rounded-bl-xl opacity-80"></div>
+                                <div class="absolute bottom-0 right-0 w-8 h-8 border-b-[3px] border-r-[3px] border-green-500 rounded-br-xl opacity-80"></div>
+                            </div>
+                            <div id="dynamic-barcode-wrapper" class="relative z-20 bg-white/95 backdrop-blur-md px-5 py-3 rounded-2xl shadow-xl barcode-enter flex items-center justify-center h-[75px] min-w-[160px] border border-black/5">
+                                <div id="dynamic-barcode-lines" class="flex gap-[2.5px] h-full items-center justify-center w-full"></div>
+                            </div>
+                            <div id="scanner-laser" class="absolute left-[10%] w-[80%] h-[3px] bg-green-500 shadow-[0_0_15px_#22c55e] z-30 transition-all ease-linear rounded-full" style="top: 5%; opacity: 0;"></div>
+                        </div>
+
+                        <div class="flex items-center gap-4 mb-6 px-2">
+                            <div class="h-px bg-[#E9E7EB] dark:bg-[#2A2B2E] flex-1"></div>
+                            <span class="text-[#40493D] dark:text-[#8B9389] text-sm font-medium">O</span>
+                            <div class="h-px bg-[#E9E7EB] dark:bg-[#2A2B2E] flex-1"></div>
+                        </div>
+
+                        <div class="flex gap-3 px-2">
+                            <div class="flex-1 bg-[#F5F3F7] dark:bg-[#1B1B1E] rounded-[1.5rem] flex items-center px-5 h-[3.25rem]">
+                                <span translate="no" class="material-symbols-outlined text-[#8B9389] mr-3 text-[20px]" aria-hidden="true">qr_code_scanner</span>
+                                <span class="text-[#8B9389] text-[15px] font-medium tracking-wide">Ingreso Manual...</span>
+                            </div>
+                            <button class="w-[3.25rem] h-[3.25rem] bg-[#F5F3F7] dark:bg-[#1B1B1E] rounded-full flex items-center justify-center" aria-label="Ir al ingreso manual">
+                                <span translate="no" class="material-symbols-outlined text-[#40493D] dark:text-[#C1C9BE]" aria-hidden="true">chevron_right</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="success-overlay" class="absolute inset-0 z-20 flex flex-col items-center justify-center success-overlay-enter bg-[#E2F4E3]/95 dark:bg-[#065314]/95 backdrop-blur-xl rounded-[2.5rem] border border-green-500/20">
+                        <div class="success-icon w-24 h-24 bg-[#0D631B] rounded-full flex items-center justify-center mb-6 shadow-xl shadow-[#0D631B]/30">
+                            <span translate="no" class="material-symbols-outlined text-white text-6xl" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">check</span>
+                        </div>
+                        <h2 class="font-extrabold text-4xl md:text-5xl tracking-tight mb-3 text-[#00390E] dark:text-[#9DF49E]">Hecho.</h2>
+                        <p class="text-[#0D631B] dark:text-[#81D683] text-lg font-medium text-center px-6">Seguro en una fracción de segundo.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="py-24 bg-[#F5F3F7] dark:bg-[#151517] relative">
+        <div class="max-w-6xl mx-auto px-6 relative z-10">
+            <div class="text-center mb-16 fade-up">
+                <h2 class="text-3xl md:text-5xl font-bold mb-4">Sin compromisos.</h2>
+                <p class="text-xl text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark">Tu salud es la máxima prioridad.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="fade-up m3-card bg-white dark:bg-[#1B1B1E] p-8 rounded-[2rem] border border-[#E9E7EB] dark:border-[#2A2B2E]" style="transition-delay: 100ms;">
+                    <div class="w-14 h-14 bg-[#EBF1FF] dark:bg-[#003567]/40 text-[#003567] dark:text-[#54A0FE] rounded-full flex items-center justify-center mb-6">
+                        <span translate="no" class="material-symbols-outlined text-3xl" aria-hidden="true">volunteer_activism</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Gratuito al 100%</h3>
+                    <p class="text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark leading-relaxed">Sin suscripciones, sin costes ocultos y cero publicidad. G-Scanner es un servicio gratuito desarrollado para ayudar a la comunidad celíaca y con intolerancias.</p>
+                </div>
+                <div class="fade-up m3-card bg-white dark:bg-[#1B1B1E] p-8 rounded-[2rem] border border-[#E9E7EB] dark:border-[#2A2B2E]" style="transition-delay: 200ms;">
+                    <div class="w-14 h-14 bg-[#E2F4E3] dark:bg-[#065314]/40 text-[#0D631B] dark:text-[#81D683] rounded-full flex items-center justify-center mb-6">
+                        <span translate="no" class="material-symbols-outlined text-3xl" aria-hidden="true">shield_person</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Privacy By Design</h3>
+                    <p class="text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark leading-relaxed">Sin ningún rastreo, tus datos se mantienen totalmente privados. Tus preferencias y el historial de escaneos se gestionan de forma transparente y siempre bajo tu control.</p>
+                </div>
+                <div class="fade-up m3-card bg-white dark:bg-[#1B1B1E] p-8 rounded-[2rem] border border-[#E9E7EB] dark:border-[#2A2B2E]" style="transition-delay: 300ms;">
+                    <div class="w-14 h-14 bg-[#FFF0E6] dark:bg-[#5C2D00]/40 text-[#AD5600] dark:text-[#FFB68A] rounded-full flex items-center justify-center mb-6">
+                        <span translate="no" class="material-symbols-outlined text-3xl" aria-hidden="true">group</span>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Community Driven</h3>
+                    <p class="text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark leading-relaxed">Alimentado por Open Food Facts, una base de datos global y actualizada continuamente. Mejorado por nuestro sistema interno de reportes de la comunidad de usuarios.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 px-6 max-w-5xl mx-auto relative flex flex-col items-center">
+        <div class="flex flex-col md:flex-row items-center gap-16 w-full mb-12">
+            <div class="flex-1 fade-up text-center md:text-left">
+                <h2 class="text-3xl md:text-5xl font-bold mb-6">Tan simple como un semáforo.</h2>
+                <p class="text-lg text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark mb-10 leading-relaxed">Leer las listas de ingredientes puede ser agotador y arriesgado. G-Scanner condensa los datos nutricionales en tres indicadores universalmente comprendidos.</p>
+
+                <div class="space-y-6 text-left">
+                    <div class="fade-up flex items-start gap-5 p-4 rounded-[1.5rem] hover:bg-[#F5F3F7] dark:hover:bg-[#1B1B1E] transition-colors" style="transition-delay: 100ms;">
+                        <div class="w-12 h-12 bg-[#E2F4E3] dark:bg-[#065314]/40 text-[#0D631B] dark:text-[#81D683] rounded-full flex items-center justify-center flex-shrink-0">
+                            <span translate="no" class="material-symbols-outlined text-2xl" aria-hidden="true" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-[#0D631B] dark:text-[#81D683]">Seguro</h4>
+                            <p class="text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark mt-1">Ingredientes seguros según tus necesidades dietéticas (ej. completamente sin gluten).</p>
+                        </div>
+                    </div>
+                    <div class="fade-up flex items-start gap-5 p-4 rounded-[1.5rem] hover:bg-[#F5F3F7] dark:hover:bg-[#1B1B1E] transition-colors" style="transition-delay: 200ms;">
+                        <div class="w-12 h-12 bg-[#FFF0E6] dark:bg-[#5C2D00]/40 text-[#AD5600] dark:text-[#FFB68A] rounded-full flex items-center justify-center flex-shrink-0">
+                            <span translate="no" class="material-symbols-outlined text-2xl" aria-hidden="true" style="font-variation-settings: 'FILL' 1;">warning</span>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-[#AD5600] dark:text-[#FFB68A]">Incierto</h4>
+                            <p class="text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark mt-1">Posibles riesgos como contaminación cruzada. Revisa siempre la etiqueta física.</p>
+                        </div>
+                    </div>
+                    <div class="fade-up flex items-start gap-5 p-4 rounded-[1.5rem] hover:bg-[#F5F3F7] dark:hover:bg-[#1B1B1E] transition-colors" style="transition-delay: 300ms;">
+                        <div class="w-12 h-12 bg-[#FFDAD6] dark:bg-[#93000A]/40 text-[#BA1A1A] dark:text-[#FFB4AB] rounded-full flex items-center justify-center flex-shrink-0">
+                            <span translate="no" class="material-symbols-outlined text-2xl" aria-hidden="true" style="font-variation-settings: 'FILL' 1;">cancel</span>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-[#BA1A1A] dark:text-[#FFB4AB]">Prohibido</h4>
+                            <p class="text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark mt-1">Contiene gluten o ingredientes restringidos. Evitar estrictamente su consumo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex-1 w-full flex justify-center fade-up" style="transition-delay: 200ms;">
+                <div class="relative w-72 h-[520px] bg-white dark:bg-[#1B1B1E] rounded-[2.5rem] border-[8px] border-[#F5F3F7] dark:border-[#242528] shadow-2xl overflow-hidden flex flex-col pt-8 px-5 group">
+                    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-[#F5F3F7] dark:bg-[#242528] rounded-b-3xl"></div>
+                    <div class="w-20 h-20 bg-[#E2F4E3] dark:bg-[#065314]/40 text-[#0D631B] dark:text-[#81D683] rounded-full flex items-center justify-center mx-auto mt-6 mb-4 group-hover:scale-110 transition-transform ease-m3 duration-500">
+                        <span translate="no" class="material-symbols-outlined text-4xl" aria-hidden="true" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                    </div>
+                    <h3 class="text-center font-bold text-3xl mb-1 text-[#0D631B] dark:text-[#81D683]">SEGURO</h3>
+                    <p class="text-center text-sm text-gray-500 dark:text-gray-400 mb-8 font-medium">Avena Sin Gluten</p>
+
+                    <div class="bg-[#FAF9FC] dark:bg-[#121214] rounded-3xl p-5 mb-4 border border-[#E9E7EB] dark:border-[#2A2B2E]">
+                        <p class="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wide font-bold mb-3 flex items-center gap-1">
+                            <span translate="no" class="material-symbols-outlined text-[16px]" aria-hidden="true">leaderboard</span> Valoración
+                        </p>
+                        <p class="text-sm font-medium flex items-center gap-2">Apto para celíacos</p>
+                    </div>
+                    <div class="bg-[#FAF9FC] dark:bg-[#121214] rounded-3xl p-5 border border-[#E9E7EB] dark:border-[#2A2B2E]">
+                        <p class="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wide font-bold mb-3 flex items-center gap-1">
+                            <span translate="no" class="material-symbols-outlined text-[16px]" aria-hidden="true">science</span> Ingredientes
+                        </p>
+                        <p class="text-sm font-medium">Copos de avena ecológicos</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full max-w-4xl fade-blur-in bg-[#F5F3F7] dark:bg-[#151517] border border-[#E9E7EB] dark:border-[#2A2B2E] p-5 md:p-6 rounded-[2rem] flex items-start gap-4 text-left">
+            <div class="space-y-1 text-xs text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark leading-relaxed">
+                <p>
+                    G-Scanner es puramente una herramienta informativa y <strong>no sustituye el consejo médico</strong>. Las 
+                    valoraciones generadas se basan en datos colaborativos de la base de datos Open Food Facts. El usuario es
+                    <strong>el único responsable</strong> de la verificación directa de las etiquetas antes de su compra y consumo.   
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About section -->
+    <section class="py-24 bg-[#F5F3F7] dark:bg-[#151517] perspective-1000 overflow-hidden relative">
+        <div class="max-w-4xl mx-auto px-6">
+            <div class="fly-in-3d w-full">
+                <div id="about-card" class="relative w-full transform-style-3d flip-transition cursor-pointer select-none hover-wave">
+                    
+                    <!-- Front Face -->
+                    <div class="bg-white dark:bg-[#1B1B1E] rounded-[2.5rem] p-8 md:p-12 shadow-sm border border-[#E9E7EB] dark:border-[#2A2B2E] flex flex-col md:flex-row items-center gap-10 backface-hidden z-20">
+                        <div class="w-32 h-32 md:w-36 md:h-36 flex-shrink-0 bg-[#E2F4E3] dark:bg-[#065314]/40 text-[#0D631B] dark:text-[#81D683] rounded-full flex items-center justify-center shadow-sm">
+                            <span id="waving-icon" translate="no" class="material-symbols-outlined text-7xl md:text-8xl" aria-hidden="true">waving_hand</span>
+                        </div>
+                        <div class="text-center md:text-left">
+                            <h2 class="text-xs font-bold uppercase tracking-widest text-[#0D631B] dark:text-[#81D683] mb-2">Detrás del proyecto</h2>
+                            <h3 class="text-3xl font-bold mb-3 text-md-sys-color-onSurface-light dark:text-md-sys-color-onSurface-dark">Hola, soy Emanuele.</h3>
+                            <p class="text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark leading-relaxed">
+                                Soy estudiante de Informática en la <strong>Universidad de Nápoles Federico II</strong>.
+                                Creé G-Scanner por una necesidad personal real: recorrer los pasillos del supermercado no debería causar ansiedad ni requerir horas leyendo etiquetas.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Back Face (Easter Egg) -->
+                    <div class="absolute inset-0 bg-gradient-to-br from-pink-50 to-rose-100 dark:from-pink-950 dark:to-rose-900 rounded-[2.5rem] p-8 md:p-12 shadow-xl border border-pink-200 dark:border-pink-800 flex flex-col items-center justify-center backface-hidden rotate-y-180 z-10 text-center">
+                        <span translate="no" class="material-symbols-outlined text-rose-500 dark:text-rose-400 text-6xl mb-4" aria-hidden="true" style="font-variation-settings: 'FILL' 1;">favorite</span>
+                        <h3 class="text-2xl md:text-3xl font-bold mb-2 text-rose-900 dark:text-rose-100">G-Scanner: ¿G de Gluten?</h3>
+                        <p class="text-rose-700 dark:text-rose-300 font-medium">Para mí, la G es de Giulia.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="download-section" class="py-24 px-6 max-w-5xl mx-auto text-center">
+        <div class="max-w-2xl mx-auto flex flex-col items-center">
+            <span translate="no" class="pop-in material-symbols-outlined text-6xl mb-6 text-md-sys-color-primary-light dark:text-md-sys-color-primary-dark drop-shadow-sm" aria-hidden="true">install_mobile</span>
+            <h2 class="fade-up text-3xl md:text-5xl font-bold mb-6" style="transition-delay: 100ms;">Lleva el escáner contigo.</h2>
+            <p class="fade-up text-lg text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark mb-10 leading-relaxed" style="transition-delay: 200ms;">
+                Descarga el APK para Android para una experiencia nativa y aún más cómoda. Poco espacio de almacenamiento requerido, mucho tiempo ahorrado.
+            </p>
+
+            <div class="slide-up-bounce w-full flex justify-center" style="transition-delay: 300ms;">
+                <a href="../assets/apk/G-Scanner.apk" download="G-Scanner.apk" class="anti-jitter inline-flex bg-[#F5F3F7] dark:bg-[#1B1B1E] text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark px-10 py-5 rounded-full font-bold text-lg items-center justify-center gap-3 hover:bg-opacity-80 hover:-translate-y-1 transition-all ease-m3 shadow-sm border border-[#E9E7EB] dark:border-[#2A2B2E] mb-10">
+                    <span translate="no" class="material-symbols-outlined text-[24px]" aria-hidden="true">android</span>
+                    Descargar APK Android
+                </a>
+            </div>
+
+            <!-- Download disclaimer -->
+            <div class="fade-blur-in w-full bg-[#F5F3F7] dark:bg-[#151517] border border-[#E9E7EB] dark:border-[#2A2B2E] p-5 md:p-6 rounded-[2rem] flex items-start gap-4 text-left" style="transition-delay: 400ms;">
+                <div class="space-y-1 text-xs text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark leading-relaxed">
+                    <p>
+                        La instalación manual del archivo APK (sideloading) se realiza bajo tu <strong>exclusiva responsabilidad</strong>.
+                        Al proceder con la descarga, declaras explícitamente haber leído y aceptado nuestros
+                        <a href="TerminosYCondiciones.html" class="underline font-medium hover:text-md-sys-color-onSurface-light dark:hover:text-md-sys-color-onSurface-dark transition-colors">Términos de Servicio</a> y 
+                        <a href="PoliticaDePrivacidad.html" class="underline font-medium hover:text-md-sys-color-onSurface-light dark:hover:text-md-sys-color-onSurface-dark transition-colors">Política de Privacidad</a>.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-[#F5F3F7] dark:bg-[#0E0E10] py-12 px-6 border-t border-[#E9E7EB] dark:border-[#242528] relative mt-12">
+        <div class="footer-reveal max-w-4xl mx-auto flex flex-col items-center text-center">
+            <div class="stagger-item flex items-center gap-2 mb-6 opacity-80">
+                <span class="font-bold text-xl">G-Scanner</span>
+            </div>
+
+            <div class="stagger-item flex flex-wrap justify-center gap-6 text-sm font-medium text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark mb-8">
+                <a href="TerminosYCondiciones.html" class="underline hover:text-md-sys-color-onSurface-light dark:hover:text-md-sys-color-onSurface-dark transition-colors">Términos de Servicio</a>
+                <a href="PoliticaDePrivacidad.html" class="underline hover:text-md-sys-color-onSurface-light dark:hover:text-md-sys-color-onSurface-dark transition-colors">Política de Privacidad</a>
+                <a href="https://world.openfoodfacts.org/" target="_blank" class="underline hover:text-md-sys-color-onSurface-light dark:hover:text-md-sys-color-onSurface-dark transition-colors">Open Food Facts</a>
+            </div>
+            <p class="stagger-item text-sm font-medium text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark">
+                &copy; <span id="year">2026</span> Emanuele Ciotola. Todos los derechos reservados. Hecho en Nápoles.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
