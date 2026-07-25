@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- ======================== -->
+  <!-- INGLESE (Root)           -->
+  <!-- ======================== -->
+  <url>
+    <loc>https://g-scanner.github.io/</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://g-scanner.github.io/PrivacyPolicy.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://g-scanner.github.io/TermsOfService.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- ======================== -->
+  <!-- ITALIANO (/it/)          -->
+  <!-- ======================== -->
+  <url>
+    <loc>https://g-scanner.github.io/it/</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://g-scanner.github.io/it/InformativaSullaPrivacy.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://g-scanner.github.io/it/TerminiDiServizio.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- ======================== -->
+  <!-- SPAGNOLO (/es/)          -->
+  <!-- ======================== -->
+  <url>
+    <loc>https://g-scanner.github.io/es/</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://g-scanner.github.io/es/PoliticaDePrivacidad.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://g-scanner.github.io/es/TerminosYCondiciones.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- ======================== -->
+  <!-- FRANCESE (/fr/)          -->
+  <!-- ======================== -->
+  <url>
+    <loc>https://g-scanner.github.io/fr/</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://g-scanner.github.io/fr/PolitiqueDeConfidentialite.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://g-scanner.github.io/fr/ConditionsDUtilisation.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- ======================== -->
+  <!-- TEDESCO (/de/)           -->
+  <!-- ======================== -->
+  <url>
+    <loc>https://g-scanner.github.io/de/</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://g-scanner.github.io/de/Datenschutzerklaerung.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  <url>
+    <loc>https://g-scanner.github.io/de/Nutzungsbedingungen.html</loc>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+</urlset>
