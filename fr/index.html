@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" class="light">
+<html lang="fr">
 
 <head>
     <meta charset="utf-8">
@@ -65,62 +65,20 @@
         "Sans publicité, axé sur la confidentialité"
       ],
 
-      "termsOfService": "https://g-scanner.github.io/ConditionsDUtilisation.html",
-      "privacyPolicy": "https://g-scanner.github.io/PolitiqueDeConfidentialite.html"
+      "termsOfService": "https://g-scanner.github.io/fr/ConditionsDUtilisation.html",
+      "privacyPolicy": "https://g-scanner.github.io/fr/PolitiqueDeConfidentialite.html"
     }
     </script>
 
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- Tailwind Config -->
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Outfit', 'sans-serif'],
-                    },
-                    colors: {
-                        md: {
-                            sys: {
-                                color: {
-                                    primary: { light: '#0D631B', dark: '#81D683' },
-                                    onPrimary: { light: '#FFFFFF', dark: '#00390E' },
-                                    primaryContainer: { light: '#2E7D32', dark: '#065314' },
-                                    onPrimaryContainer: { light: '#FFFFFF', dark: '#9DF49E' },
-                                    surface: { light: '#FAF9FC', dark: '#121214' },
-                                    onSurface: { light: '#1B1B1E', dark: '#E4E2E6' },
-                                    surfaceVariant: { light: '#EFEDF1', dark: '#242528' },
-                                    onSurfaceVariant: { light: '#40493D', dark: '#C1C9BE' },
-                                    outline: { light: '#BFCABA', dark: '#8B9389' },
-                                    secondaryContainer: { light: '#54A0FE', dark: '#004886' },
-                                    onSecondaryContainer: { light: '#003567', dark: '#D0E4FF' },
-                                    tertiaryContainer: { light: '#AD5600', dark: '#FFB68A' },
-                                    onTertiaryContainer: { light: '#FFFFFF', dark: '#5C2D00' },
-                                    error: { light: '#BA1A1A', dark: '#FFB4AB' },
-                                    errorContainer: { light: '#FFDAD6', dark: '#93000A' },
-                                    onErrorContainer: { light: '#410002', dark: '#FFDAD6' }
-                                }
-                            }
-                        }
-                    }
-                }
-            }
-        }
-    </script>
-
-    <!-- Google Fonts & Icons -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL,GRAD,opsz@400,0..1,0,24" rel="stylesheet" />
+    <!-- Local Fonts Preload (PageSpeed 100) -->
+    <link rel="preload" href="../assets/fonts/outfit.woff2" as="font" type="font/woff2" crossorigin>
 
     <!-- External CSS -->
+    <link rel="preload" as="style" href="../style.css">
     <link rel="stylesheet" href="../style.css">
     
     <!-- External JS -->
+    <script src="../system-theme.js"></script>
     <script src="../script.js" defer></script>
 </head>
 
@@ -139,9 +97,9 @@
             <!-- Language Selector -->
             <div class="relative" id="lang-menu-container">
                 <button id="lang-menu-btn" class="flex items-center bg-transparent border border-[#E9E7EB] dark:border-[#2A2B2E] rounded-full px-3 py-1.5 hover:bg-[#F5F3F7] dark:hover:bg-[#242528] transition-colors cursor-pointer group" aria-expanded="false" aria-label="Sélectionner la langue">
-                    <span translate="no" class="material-symbols-outlined text-sm mr-1 text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark" aria-hidden="true">language</span>
+                    <span translate="no" style="--icon: url('../assets/icons/language.svg')" class="svg-icon text-sm mr-1 text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark" aria-hidden="true"></span>
                     <span class="text-sm font-medium text-md-sys-color-onSurface-light dark:text-md-sys-color-onSurface-dark pr-4">FR</span>
-                    <span id="lang-menu-chevron" translate="no" class="material-symbols-outlined text-[16px] absolute right-2 pointer-events-none text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark transition-transform duration-300 ease-m3" aria-hidden="true">expand_more</span>
+                    <span id="lang-menu-chevron" translate="no" style="--icon: url('../assets/icons/expand_more.svg')" class="svg-icon text-[16px] absolute right-2 pointer-events-none text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark transition-all duration-300 ease-m3" aria-hidden="true"></span>
                 </button>
 
                 <div id="lang-dropdown" class="absolute top-full right-0 mt-2 w-44 bg-white dark:bg-[#1B1B1E] border border-[#E9E7EB] dark:border-[#2A2B2E] rounded-[1.25rem] shadow-xl opacity-0 scale-95 pointer-events-none transition-all duration-300 ease-m3 z-50 overflow-hidden transform origin-top-right">
@@ -160,7 +118,7 @@
                         </a>
                         <div class="px-5 py-2.5 text-sm font-bold bg-[#E2F4E3] dark:bg-[#065314]/40 text-[#0D631B] dark:text-[#81D683] flex items-center justify-between cursor-default">
                             Français
-                            <span translate="no" class="material-symbols-outlined text-[18px]" aria-hidden="true">check</span>
+                            <span translate="no" style="--icon: url('../assets/icons/check.svg')" class="svg-icon text-[18px]" aria-hidden="true"></span>
                         </div>
                     </div>
                 </div>
@@ -168,14 +126,14 @@
 
             <!-- Theme Toggle -->
             <button id="theme-toggle" class="p-2 rounded-full flex items-center justify-center hover:bg-[#F5F3F7] dark:hover:bg-[#242528] transition-colors ease-m3" aria-label="Basculer le mode sombre">
-                <span translate="no" class="material-symbols-outlined block dark:hidden leading-none" aria-hidden="true">dark_mode</span>
-                <span translate="no" class="material-symbols-outlined hidden dark:block text-md-sys-color-primary-dark leading-none" aria-hidden="true">light_mode</span>
+                <span translate="no" style="--icon: url('../assets/icons/dark_mode.svg')" class="svg-icon block dark:hidden leading-none" aria-hidden="true"></span>
+                <span translate="no" style="--icon: url('../assets/icons/light_mode.svg')" class="svg-icon hidden dark:block text-md-sys-color-primary-dark leading-none" aria-hidden="true"></span>
             </button>
 
             <!-- Launch App CTA -->
             <a href="https://g-scanner.github.io/webapp/" class="hidden sm:flex bg-md-sys-color-primary-light dark:bg-md-sys-color-primary-dark text-md-sys-color-onPrimary-light dark:text-md-sys-color-onPrimary-dark px-5 py-2 rounded-full font-medium text-sm items-center gap-2 hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 transition-all ease-m3 anti-jitter">
                 Lancer WebApp
-                <span translate="no" class="material-symbols-outlined text-[18px]" aria-hidden="true">open_in_new</span>
+                <span translate="no" style="--icon: url('../assets/icons/open_in_new.svg')" class="svg-icon text-[18px]" aria-hidden="true"></span>
             </a>
         </div>
     </nav>
@@ -198,11 +156,11 @@
 
             <div class="fade-up flex flex-col sm:flex-row items-center justify-center gap-4" style="transition-delay: 200ms;">
                 <a href="https://g-scanner.github.io/webapp/" class="anti-jitter w-full sm:w-auto bg-md-sys-color-primary-light dark:bg-md-sys-color-primary-dark text-md-sys-color-onPrimary-light dark:text-md-sys-color-onPrimary-dark px-8 py-4 rounded-full font-semibold text-lg flex items-center justify-center gap-2 hover:shadow-lg hover:-translate-y-1 transition-all ease-m3">
-                    <span translate="no" class="material-symbols-outlined" aria-hidden="true">globe</span>
+                    <span translate="no" style="--icon: url('../assets/icons/globe.svg')" class="svg-icon" aria-hidden="true"></span>
                     Lancer WebApp
                 </a>
                 <a href="#download-section" class="anti-jitter w-full sm:w-auto bg-white/50 dark:bg-[#1B1B1E]/40 backdrop-blur-md text-md-sys-color-onSurface-light dark:text-md-sys-color-onSurface-dark px-8 py-4 rounded-full font-semibold text-lg flex items-center justify-center gap-2 hover:bg-white/80 dark:hover:bg-[#242528]/80 hover:-translate-y-1 transition-all ease-m3 border border-[#E9E7EB] dark:border-[#2A2B2E]">
-                    <span translate="no" class="material-symbols-outlined" aria-hidden="true">android</span>
+                    <span translate="no" style="--icon: url('../assets/icons/android.svg')" class="svg-icon" aria-hidden="true"></span>
                     Télécharger l'App
                 </a>
             </div>
@@ -240,18 +198,18 @@
 
                         <div class="flex gap-3 px-2">
                             <div class="flex-1 bg-[#F5F3F7] dark:bg-[#1B1B1E] rounded-[1.5rem] flex items-center px-5 h-[3.25rem]">
-                                <span translate="no" class="material-symbols-outlined text-[#8B9389] mr-3 text-[20px]" aria-hidden="true">qr_code_scanner</span>
+                                <span translate="no" style="--icon: url('../assets/icons/barcode_scanner.svg')" class="svg-icon text-[#8B9389] mr-3 text-[20px]" aria-hidden="true"></span>
                                 <span class="text-[#8B9389] text-[15px] font-medium tracking-wide">Saisie manuelle...</span>
                             </div>
                             <button class="w-[3.25rem] h-[3.25rem] bg-[#F5F3F7] dark:bg-[#1B1B1E] rounded-full flex items-center justify-center" aria-label="Aller à la saisie manuelle">
-                                <span translate="no" class="material-symbols-outlined text-[#40493D] dark:text-[#C1C9BE]" aria-hidden="true">chevron_right</span>
+                                <span translate="no" style="--icon: url('../assets/icons/chevron_right.svg')" class="svg-icon text-[#40493D] dark:text-[#C1C9BE]" aria-hidden="true"></span>
                             </button>
                         </div>
                     </div>
 
                     <div id="success-overlay" class="absolute inset-0 z-20 flex flex-col items-center justify-center success-overlay-enter bg-[#E2F4E3]/95 dark:bg-[#065314]/95 backdrop-blur-xl rounded-[2.5rem] border border-green-500/20">
                         <div class="success-icon w-24 h-24 bg-[#0D631B] rounded-full flex items-center justify-center mb-6 shadow-xl shadow-[#0D631B]/30">
-                            <span translate="no" class="material-symbols-outlined text-white text-6xl" style="font-variation-settings: 'FILL' 1;" aria-hidden="true">check</span>
+                            <span translate="no" style="--icon: url('../assets/icons/check.svg')" class="svg-icon text-white text-6xl" aria-hidden="true"></span>
                         </div>
                         <h2 class="font-extrabold text-4xl md:text-5xl tracking-tight mb-3 text-[#00390E] dark:text-[#9DF49E]">Terminé.</h2>
                         <p class="text-[#0D631B] dark:text-[#81D683] text-lg font-medium text-center px-6">En sécurité en une fraction de seconde.</p>
@@ -271,21 +229,21 @@
             <div class="grid md:grid-cols-3 gap-8">
                 <div class="fade-up m3-card bg-white dark:bg-[#1B1B1E] p-8 rounded-[2rem] border border-[#E9E7EB] dark:border-[#2A2B2E]" style="transition-delay: 100ms;">
                     <div class="w-14 h-14 bg-[#EBF1FF] dark:bg-[#003567]/40 text-[#003567] dark:text-[#54A0FE] rounded-full flex items-center justify-center mb-6">
-                        <span translate="no" class="material-symbols-outlined text-3xl" aria-hidden="true">volunteer_activism</span>
+                        <span translate="no" style="--icon: url('../assets/icons/volunteer_activism.svg')" class="svg-icon text-3xl" aria-hidden="true"></span>
                     </div>
                     <h3 class="text-2xl font-bold mb-3">100% Gratuit</h3>
                     <p class="text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark leading-relaxed">Aucun abonnement, aucun frais caché et zéro publicité. G-Scanner est un service gratuit conçu uniquement pour aider la communauté des cœliaques et des intolérants.</p>
                 </div>
                 <div class="fade-up m3-card bg-white dark:bg-[#1B1B1E] p-8 rounded-[2rem] border border-[#E9E7EB] dark:border-[#2A2B2E]" style="transition-delay: 200ms;">
                     <div class="w-14 h-14 bg-[#E2F4E3] dark:bg-[#065314]/40 text-[#0D631B] dark:text-[#81D683] rounded-full flex items-center justify-center mb-6">
-                        <span translate="no" class="material-symbols-outlined text-3xl" aria-hidden="true">shield_person</span>
+                        <span translate="no" style="--icon: url('../assets/icons/shield_person.svg')" class="svg-icon text-3xl" aria-hidden="true"></span>
                     </div>
                     <h3 class="text-2xl font-bold mb-3">Privacy by Design</h3>
                     <p class="text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark leading-relaxed">Aucun traçage, toutes vos données restent totalement privées. Vos préférences et l'historique de vos scans sont gérés de manière transparente, uniquement pour vous.</p>
                 </div>
                 <div class="fade-up m3-card bg-white dark:bg-[#1B1B1E] p-8 rounded-[2rem] border border-[#E9E7EB] dark:border-[#2A2B2E]" style="transition-delay: 300ms;">
                     <div class="w-14 h-14 bg-[#FFF0E6] dark:bg-[#5C2D00]/40 text-[#AD5600] dark:text-[#FFB68A] rounded-full flex items-center justify-center mb-6">
-                        <span translate="no" class="material-symbols-outlined text-3xl" aria-hidden="true">group</span>
+                        <span translate="no" style="--icon: url('../assets/icons/group.svg')" class="svg-icon text-3xl" aria-hidden="true"></span>
                     </div>
                     <h3 class="text-2xl font-bold mb-3">Community Driven</h3>
                     <p class="text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark leading-relaxed">Propulsé par Open Food Facts, une base de données collaborative ouverte mise à jour en continu dans le monde entier. Enrichi par notre système de signalement interne.</p>
@@ -303,7 +261,7 @@
                 <div class="space-y-6 text-left">
                     <div class="fade-up flex items-start gap-5 p-4 rounded-[1.5rem] hover:bg-[#F5F3F7] dark:hover:bg-[#1B1B1E] transition-colors" style="transition-delay: 100ms;">
                         <div class="w-12 h-12 bg-[#E2F4E3] dark:bg-[#065314]/40 text-[#0D631B] dark:text-[#81D683] rounded-full flex items-center justify-center flex-shrink-0">
-                            <span translate="no" class="material-symbols-outlined text-2xl" aria-hidden="true" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                            <span translate="no" style="--icon: url('../assets/icons/check_circle.svg')" class="svg-icon text-2xl" aria-hidden="true"></span>
                         </div>
                         <div>
                             <h4 class="text-xl font-bold text-[#0D631B] dark:text-[#81D683]">Sûr</h4>
@@ -312,7 +270,7 @@
                     </div>
                     <div class="fade-up flex items-start gap-5 p-4 rounded-[1.5rem] hover:bg-[#F5F3F7] dark:hover:bg-[#1B1B1E] transition-colors" style="transition-delay: 200ms;">
                         <div class="w-12 h-12 bg-[#FFF0E6] dark:bg-[#5C2D00]/40 text-[#AD5600] dark:text-[#FFB68A] rounded-full flex items-center justify-center flex-shrink-0">
-                            <span translate="no" class="material-symbols-outlined text-2xl" aria-hidden="true" style="font-variation-settings: 'FILL' 1;">warning</span>
+                            <span translate="no" style="--icon: url('../assets/icons/warning.svg')" class="svg-icon text-2xl" aria-hidden="true"></span>
                         </div>
                         <div>
                             <h4 class="text-xl font-bold text-[#AD5600] dark:text-[#FFB68A]">Incertain</h4>
@@ -321,7 +279,7 @@
                     </div>
                     <div class="fade-up flex items-start gap-5 p-4 rounded-[1.5rem] hover:bg-[#F5F3F7] dark:hover:bg-[#1B1B1E] transition-colors" style="transition-delay: 300ms;">
                         <div class="w-12 h-12 bg-[#FFDAD6] dark:bg-[#93000A]/40 text-[#BA1A1A] dark:text-[#FFB4AB] rounded-full flex items-center justify-center flex-shrink-0">
-                            <span translate="no" class="material-symbols-outlined text-2xl" aria-hidden="true" style="font-variation-settings: 'FILL' 1;">cancel</span>
+                            <span translate="no" style="--icon: url('../assets/icons/cancel.svg')" class="svg-icon text-2xl" aria-hidden="true"></span>
                         </div>
                         <div>
                             <h4 class="text-xl font-bold text-[#BA1A1A] dark:text-[#FFB4AB]">Interdit</h4>
@@ -335,20 +293,20 @@
                 <div class="relative w-72 h-[520px] bg-white dark:bg-[#1B1B1E] rounded-[2.5rem] border-[8px] border-[#F5F3F7] dark:border-[#242528] shadow-2xl overflow-hidden flex flex-col pt-8 px-5 group">
                     <div class="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-[#F5F3F7] dark:bg-[#242528] rounded-b-3xl"></div>
                     <div class="w-20 h-20 bg-[#E2F4E3] dark:bg-[#065314]/40 text-[#0D631B] dark:text-[#81D683] rounded-full flex items-center justify-center mx-auto mt-6 mb-4 group-hover:scale-110 transition-transform ease-m3 duration-500">
-                        <span translate="no" class="material-symbols-outlined text-4xl" aria-hidden="true" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                        <span translate="no" style="--icon: url('../assets/icons/check_circle.svg')" class="svg-icon text-4xl" aria-hidden="true"></span>
                     </div>
                     <h3 class="text-center font-bold text-3xl mb-1 text-[#0D631B] dark:text-[#81D683]">SÛR</h3>
                     <p class="text-center text-sm text-gray-500 dark:text-gray-400 mb-8 font-medium">Avoine Sans Gluten</p>
 
                     <div class="bg-[#FAF9FC] dark:bg-[#121214] rounded-3xl p-5 mb-4 border border-[#E9E7EB] dark:border-[#2A2B2E]">
                         <p class="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wide font-bold mb-3 flex items-center gap-1">
-                            <span translate="no" class="material-symbols-outlined text-[16px]" aria-hidden="true">leaderboard</span> Évaluation
+                            <span translate="no" style="--icon: url('../assets/icons/leaderboard.svg')" class="svg-icon text-[16px]" aria-hidden="true"></span> Évaluation
                         </p>
                         <p class="text-sm font-medium flex items-center gap-2">Adapté aux cœliaques</p>
                     </div>
                     <div class="bg-[#FAF9FC] dark:bg-[#121214] rounded-3xl p-5 border border-[#E9E7EB] dark:border-[#2A2B2E]">
                         <p class="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wide font-bold mb-3 flex items-center gap-1">
-                            <span translate="no" class="material-symbols-outlined text-[16px]" aria-hidden="true">science</span> Ingrédients
+                            <span translate="no" style="--icon: url('../assets/icons/science.svg')" class="svg-icon text-[16px]" aria-hidden="true"></span> Ingrédients
                         </p>
                         <p class="text-sm font-medium">Flocons d'avoine bio</p>
                     </div>
@@ -376,7 +334,7 @@
                     <!-- Front Face -->
                     <div class="bg-white dark:bg-[#1B1B1E] rounded-[2.5rem] p-8 md:p-12 shadow-sm border border-[#E9E7EB] dark:border-[#2A2B2E] flex flex-col md:flex-row items-center gap-10 backface-hidden z-20">
                         <div class="w-32 h-32 md:w-36 md:h-36 flex-shrink-0 bg-[#E2F4E3] dark:bg-[#065314]/40 text-[#0D631B] dark:text-[#81D683] rounded-full flex items-center justify-center shadow-sm">
-                            <span id="waving-icon" translate="no" class="material-symbols-outlined text-7xl md:text-8xl" aria-hidden="true">waving_hand</span>
+                            <span id="waving-icon" translate="no" style="--icon: url('../assets/icons/waving_hand.svg')" class="svg-icon text-7xl md:text-8xl" aria-hidden="true"></span>
                         </div>
                         <div class="text-center md:text-left">
                             <h2 class="text-xs font-bold uppercase tracking-widest text-[#0D631B] dark:text-[#81D683] mb-2">Derrière le projet</h2>
@@ -390,7 +348,7 @@
 
                     <!-- Back Face (Easter Egg) -->
                     <div class="absolute inset-0 bg-gradient-to-br from-pink-50 to-rose-100 dark:from-pink-950 dark:to-rose-900 rounded-[2.5rem] p-8 md:p-12 shadow-xl border border-pink-200 dark:border-pink-800 flex flex-col items-center justify-center backface-hidden rotate-y-180 z-10 text-center">
-                        <span translate="no" class="material-symbols-outlined text-rose-500 dark:text-rose-400 text-6xl mb-4" aria-hidden="true" style="font-variation-settings: 'FILL' 1;">favorite</span>
+                        <span translate="no" style="--icon: url('../assets/icons/favorite.svg')" class="svg-icon text-rose-500 dark:text-rose-400 text-6xl mb-4" aria-hidden="true"></span>
                         <h3 class="text-2xl md:text-3xl font-bold mb-2 text-rose-900 dark:text-rose-100">G-Scanner : G pour Gluten ?</h3>
                         <p class="text-rose-700 dark:text-rose-300 font-medium">Pour moi, le G signifie Giulia.</p>
                     </div>
@@ -401,7 +359,7 @@
 
     <section id="download-section" class="py-24 px-6 max-w-5xl mx-auto text-center">
         <div class="max-w-2xl mx-auto flex flex-col items-center">
-            <span translate="no" class="pop-in material-symbols-outlined text-6xl mb-6 text-md-sys-color-primary-light dark:text-md-sys-color-primary-dark drop-shadow-sm" aria-hidden="true">install_mobile</span>
+            <span translate="no" style="--icon: url('../assets/icons/install_mobile.svg')" class="svg-icon text-6xl mb-6 text-md-sys-color-primary-light dark:text-md-sys-color-primary-dark drop-shadow-sm" aria-hidden="true"></span>
             <h2 class="fade-up text-3xl md:text-5xl font-bold mb-6" style="transition-delay: 100ms;">Prenez G-Scanner avec vous.</h2>
             <p class="fade-up text-lg text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark mb-10 leading-relaxed" style="transition-delay: 200ms;">
                 Téléchargez l'APK Android pour une expérience native et plus fluide. Peu d'espace de stockage requis, un maximum de temps gagné lors de vos courses.
@@ -409,7 +367,7 @@
 
             <div class="slide-up-bounce w-full flex justify-center" style="transition-delay: 300ms;">
                 <a href="../assets/apk/G-Scanner.apk" download="G-Scanner.apk" class="anti-jitter inline-flex bg-[#F5F3F7] dark:bg-[#1B1B1E] text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark px-10 py-5 rounded-full font-bold text-lg items-center justify-center gap-3 hover:bg-opacity-80 hover:-translate-y-1 transition-all ease-m3 shadow-sm border border-[#E9E7EB] dark:border-[#2A2B2E] mb-10">
-                    <span translate="no" class="material-symbols-outlined text-[24px]" aria-hidden="true">android</span>
+                    <span translate="no" style="--icon: url('../assets/icons/android.svg')" class="svg-icon" aria-hidden="true"></span>
                     Télécharger l'APK Android
                 </a>
             </div>
