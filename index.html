@@ -85,308 +85,314 @@
 
 <body class="bg-md-sys-color-surface-light dark:bg-md-sys-color-surface-dark text-md-sys-color-onSurface-light dark:text-md-sys-color-onSurface-dark antialiased transition-colors duration-500 ease-m3 selection:bg-md-sys-color-primaryContainer-light selection:text-md-sys-color-onPrimaryContainer-light overflow-x-hidden">
 
-    <!-- FLOATING NAVBAR -->
-    <nav class="fixed top-4 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-6xl bg-md-sys-color-surface-light/60 dark:bg-md-sys-color-surface-dark/60 backdrop-blur-2xl border border-[#E9E7EB] dark:border-[#2A2B2E] rounded-full px-4 py-3 flex items-center justify-between z-50 shadow-sm ease-m3 transition-all">
-        <div class="flex items-center gap-2 pl-2 cursor-pointer" onclick="window.scrollTo(0,0)">
-            <div class="w-8 h-8 text-md-sys-color-onPrimary-light dark:text-md-sys-color-onPrimary-dark rounded-full flex items-center justify-center transition-transform hover:rotate-[-31deg]">
-                <img src="assets/logo/icon.svg" alt="G-Scanner App Logo" class="w-20px h-20px rounded-full object-cover" />
+    <header>
+        <!-- FLOATING NAVBAR -->
+        <nav class="fixed top-4 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-6xl bg-md-sys-color-surface-light/60 dark:bg-md-sys-color-surface-dark/60 backdrop-blur-2xl border border-[#E9E7EB] dark:border-[#2A2B2E] rounded-full px-4 py-3 flex items-center justify-between z-50 shadow-sm ease-m3 transition-all">
+            <div class="flex items-center gap-2 pl-2 cursor-pointer" onclick="window.scrollTo(0,0)">
+                <div class="w-8 h-8 text-md-sys-color-onPrimary-light dark:text-md-sys-color-onPrimary-dark rounded-full flex items-center justify-center transition-transform hover:rotate-[-31deg]">
+                    <img src="assets/logo/icon.svg" alt="G-Scanner App Logo" class="w-20px h-20px rounded-full object-cover" />
+                </div>
+                <span class="font-bold text-lg tracking-tight hidden sm:block">G-Scanner</span>
             </div>
-            <span class="font-bold text-lg tracking-tight hidden sm:block">G-Scanner</span>
-        </div>
 
-        <div class="flex items-center gap-2 sm:gap-4">
-            <!-- Language Selector -->
-            <div class="relative" id="lang-menu-container">
-                <button id="lang-menu-btn" class="flex items-center bg-transparent border border-[#E9E7EB] dark:border-[#2A2B2E] rounded-full px-3 py-1.5 hover:bg-[#F5F3F7] dark:hover:bg-[#242528] transition-colors cursor-pointer group" aria-expanded="false" aria-label="Select language">
-                    <span translate="no" style="--icon: url('assets/icons/language.svg')" class="svg-icon text-sm mr-1 text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark" aria-hidden="true"></span>
-                    <span class="text-sm font-medium text-md-sys-color-onSurface-light dark:text-md-sys-color-onSurface-dark pr-4">EN</span>
-                    <span id="lang-menu-chevron" translate="no" style="--icon: url('assets/icons/expand_more.svg')" class="svg-icon text-[16px] absolute right-2 pointer-events-none text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark transition-all duration-300 ease-m3" aria-hidden="true"></span>
+            <div class="flex items-center gap-2 sm:gap-4">
+                <!-- Language Selector -->
+                <div class="relative" id="lang-menu-container">
+                    <button id="lang-menu-btn" class="flex items-center bg-transparent border border-[#E9E7EB] dark:border-[#2A2B2E] rounded-full px-3 py-1.5 hover:bg-[#F5F3F7] dark:hover:bg-[#242528] transition-colors cursor-pointer group" aria-expanded="false" aria-label="Select language">
+                        <span translate="no" style="--icon: url('assets/icons/language.svg')" class="svg-icon text-sm mr-1 text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark" aria-hidden="true"></span>
+                        <span class="text-sm font-medium text-md-sys-color-onSurface-light dark:text-md-sys-color-onSurface-dark pr-4">EN</span>
+                        <span id="lang-menu-chevron" translate="no" style="--icon: url('assets/icons/expand_more.svg')" class="svg-icon text-[16px] absolute right-2 pointer-events-none text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark transition-all duration-300 ease-m3" aria-hidden="true"></span>
+                    </button>
+
+                    <div id="lang-dropdown" class="absolute top-full right-0 mt-2 w-44 bg-white dark:bg-[#1B1B1E] border border-[#E9E7EB] dark:border-[#2A2B2E] rounded-[1.25rem] shadow-xl opacity-0 scale-95 pointer-events-none transition-all duration-300 ease-m3 z-50 overflow-hidden transform origin-top-right">
+                        <div class="py-2 flex flex-col">
+                            <div class="px-5 py-2.5 text-sm font-bold bg-[#E2F4E3] dark:bg-[#065314]/40 text-[#0D631B] dark:text-[#81D683] flex items-center justify-between cursor-default">
+                                English
+                                <span translate="no" style="--icon: url('assets/icons/check.svg')" class="svg-icon text-[18px]" aria-hidden="true"></span>
+                            </div>
+                            <a href="it/" class="px-5 py-2.5 text-sm font-medium hover:bg-[#F5F3F7] dark:hover:bg-[#242528] text-md-sys-color-onSurface-light dark:text-md-sys-color-onSurface-dark transition-colors flex items-center justify-between">
+                                Italiano
+                            </a>
+                            <a href="es/" class="px-5 py-2.5 text-sm font-medium hover:bg-[#F5F3F7] dark:hover:bg-[#242528] text-md-sys-color-onSurface-light dark:text-md-sys-color-onSurface-dark transition-colors flex items-center justify-between">
+                                Español
+                            </a>
+                            <a href="de/" class="px-5 py-2.5 text-sm font-medium hover:bg-[#F5F3F7] dark:hover:bg-[#242528] text-md-sys-color-onSurface-light dark:text-md-sys-color-onSurface-dark transition-colors flex items-center justify-between">
+                                Deutsch
+                            </a>
+                            <a href="fr/" class="px-5 py-2.5 text-sm font-medium hover:bg-[#F5F3F7] dark:hover:bg-[#242528] text-md-sys-color-onSurface-light dark:text-md-sys-color-onSurface-dark transition-colors flex items-center justify-between">
+                                Français
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Theme Toggle -->
+                <button id="theme-toggle" class="p-2 rounded-full flex items-center justify-center hover:bg-[#F5F3F7] dark:hover:bg-[#242528] transition-colors ease-m3" aria-label="Toggle Dark Mode">
+                    <span translate="no" style="--icon: url('assets/icons/dark_mode.svg')" class="svg-icon block dark:hidden leading-none" aria-hidden="true"></span>
+                    <span translate="no" style="--icon: url('assets/icons/light_mode.svg')" class="svg-icon hidden dark:block text-md-sys-color-primary-dark leading-none" aria-hidden="true"></span>
                 </button>
 
-                <div id="lang-dropdown" class="absolute top-full right-0 mt-2 w-44 bg-white dark:bg-[#1B1B1E] border border-[#E9E7EB] dark:border-[#2A2B2E] rounded-[1.25rem] shadow-xl opacity-0 scale-95 pointer-events-none transition-all duration-300 ease-m3 z-50 overflow-hidden transform origin-top-right">
-                    <div class="py-2 flex flex-col">
-                        <div class="px-5 py-2.5 text-sm font-bold bg-[#E2F4E3] dark:bg-[#065314]/40 text-[#0D631B] dark:text-[#81D683] flex items-center justify-between cursor-default">
-                            English
-                            <span translate="no" style="--icon: url('assets/icons/check.svg')" class="svg-icon text-[18px]" aria-hidden="true"></span>
-                        </div>
-                        <a href="it/" class="px-5 py-2.5 text-sm font-medium hover:bg-[#F5F3F7] dark:hover:bg-[#242528] text-md-sys-color-onSurface-light dark:text-md-sys-color-onSurface-dark transition-colors flex items-center justify-between">
-                            Italiano
-                        </a>
-                        <a href="es/" class="px-5 py-2.5 text-sm font-medium hover:bg-[#F5F3F7] dark:hover:bg-[#242528] text-md-sys-color-onSurface-light dark:text-md-sys-color-onSurface-dark transition-colors flex items-center justify-between">
-                            Español
-                        </a>
-                        <a href="de/" class="px-5 py-2.5 text-sm font-medium hover:bg-[#F5F3F7] dark:hover:bg-[#242528] text-md-sys-color-onSurface-light dark:text-md-sys-color-onSurface-dark transition-colors flex items-center justify-between">
-                            Deutsch
-                        </a>
-                        <a href="fr/" class="px-5 py-2.5 text-sm font-medium hover:bg-[#F5F3F7] dark:hover:bg-[#242528] text-md-sys-color-onSurface-light dark:text-md-sys-color-onSurface-dark transition-colors flex items-center justify-between">
-                            Français
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Theme Toggle -->
-            <button id="theme-toggle" class="p-2 rounded-full flex items-center justify-center hover:bg-[#F5F3F7] dark:hover:bg-[#242528] transition-colors ease-m3" aria-label="Toggle Dark Mode">
-                <span translate="no" style="--icon: url('assets/icons/dark_mode.svg')" class="svg-icon block dark:hidden leading-none" aria-hidden="true"></span>
-                <span translate="no" style="--icon: url('assets/icons/light_mode.svg')" class="svg-icon hidden dark:block text-md-sys-color-primary-dark leading-none" aria-hidden="true"></span>
-            </button>
-
-            <!-- Launch App CTA -->
-            <a href="https://g-scanner.github.io/webapp/" class="hidden sm:flex bg-md-sys-color-primary-light dark:bg-md-sys-color-primary-dark text-md-sys-color-onPrimary-light dark:text-md-sys-color-onPrimary-dark px-5 py-2 rounded-full font-medium text-sm items-center gap-2 hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 transition-all ease-m3 anti-jitter">
-                Launch WebApp
-                <span translate="no" style="--icon: url('assets/icons/open_in_new.svg')" class="svg-icon text-[18px]" aria-hidden="true"></span>
-            </a>
-        </div>
-    </nav>
-
-    <!-- HERO SECTION -->
-    <header class="relative pt-40 pb-24 px-6 min-h-[95vh] flex flex-col items-center justify-center">
-        <!-- Abstract Background Blobs -->
-        <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-            <div class="bg-blob absolute top-[-5%] -left-20 w-[600px] h-[600px] bg-blue-100/60 dark:bg-[#003567]/30 blur-[90px] mix-blend-multiply dark:mix-blend-lighten"></div>
-            <div class="bg-blob absolute top-[43%] -right-20 w-[500px] h-[500px] bg-[#2E7D32]/25 dark:bg-[#065314]/40 blur-[100px] mix-blend-multiply dark:mix-blend-lighten" style="animation-delay: 2s;"></div>
-        </div>
-
-        <div class="relative z-10 w-full max-w-3xl mx-auto text-center mb-16">
-            <h1 class="fade-up text-5xl md:text-7xl font-bold tracking-tight mb-6 text-md-sys-color-onSurface-light dark:text-md-sys-color-onSurface-dark leading-[1.1]">
-                The food scanner <br class="hidden sm:block" /> built to protect you.
-            </h1>
-            <p class="fade-up text-lg md:text-xl text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark mb-10 leading-relaxed" style="transition-delay: 100ms;">
-                Instantly check products for hidden gluten, suspicious additives, or lactose.
-                No ads. No tracking. A 100% free tool for your dietary peace of mind.
-            </p>
-
-            <div class="fade-up flex flex-col sm:flex-row items-center justify-center gap-4" style="transition-delay: 200ms;">
-                <a href="https://g-scanner.github.io/webapp/" class="anti-jitter w-full sm:w-auto bg-md-sys-color-primary-light dark:bg-md-sys-color-primary-dark text-md-sys-color-onPrimary-light dark:text-md-sys-color-onPrimary-dark px-8 py-4 rounded-full font-semibold text-lg flex items-center justify-center gap-2 hover:shadow-lg hover:-translate-y-1 transition-all ease-m3">
-                    <span translate="no" style="--icon: url('assets/icons/globe.svg')" class="svg-icon" aria-hidden="true"></span>
-                    Start WebApp
-                </a>
-                <a href="#download-section" class="anti-jitter w-full sm:w-auto bg-white/50 dark:bg-[#1B1B1E]/40 backdrop-blur-md text-md-sys-color-onSurface-light dark:text-md-sys-color-onSurface-dark px-8 py-4 rounded-full font-semibold text-lg flex items-center justify-center gap-2 hover:bg-white/80 dark:hover:bg-[#242528]/80 hover:-translate-y-1 transition-all ease-m3 border border-[#E9E7EB] dark:border-[#2A2B2E]">
-                    <span translate="no" style="--icon: url('assets/icons/android.svg')" class="svg-icon" aria-hidden="true"></span>
-                    Download App
+                <!-- Launch App CTA -->
+                <a href="https://g-scanner.github.io/webapp/" class="hidden sm:flex bg-md-sys-color-primary-light dark:bg-md-sys-color-primary-dark text-md-sys-color-onPrimary-light dark:text-md-sys-color-onPrimary-dark px-5 py-2 rounded-full font-medium text-sm items-center gap-2 hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 transition-all ease-m3 anti-jitter">
+                    Launch WebApp
+                    <span translate="no" style="--icon: url('assets/icons/open_in_new.svg')" class="svg-icon text-[18px]" aria-hidden="true"></span>
                 </a>
             </div>
-        </div>
-
-        <div class="relative z-10 w-full max-w-[420px] fade-up" style="transition-delay: 300ms;">
-            <div id="full-scanner-container" class="relative w-full h-[460px]">
-                <div class="relative w-full h-full bg-white dark:bg-[#121214] rounded-[2.5rem] shadow-2xl border border-[#E9E7EB] dark:border-[#2A2B2E] overflow-hidden">
-
-                    <div id="front-ui" class="absolute inset-0 flex flex-col p-6 pb-8 front-ui origin-center z-10 bg-white dark:bg-[#121214]">
-                        <div class="text-center mb-6 mt-2">
-                            <h2 class="font-bold text-2xl md:text-3xl text-gray-900 dark:text-gray-100 tracking-tight">Scan Product</h2>
-                            <p class="text-[15px] text-gray-600 dark:text-gray-400 mt-2 leading-snug px-4">Align the barcode within the frame.</p>
-                        </div>
-
-                        <div class="relative w-full aspect-video mb-6 bg-[#000000] rounded-[2rem] overflow-hidden flex items-center justify-center shadow-inner border border-gray-800">
-                            <div class="absolute inset-0 bg-[url(assets/images/scanner-bg.webp)] bg-cover bg-center opacity-30 blur-[4px]"></div>
-                            <div class="absolute inset-4 overflow-hidden pointer-events-none z-10">
-                                <div class="absolute top-0 left-0 w-8 h-8 border-t-[3px] border-l-[3px] border-green-500 rounded-tl-xl opacity-80"></div>
-                                <div class="absolute top-0 right-0 w-8 h-8 border-t-[3px] border-r-[3px] border-green-500 rounded-tr-xl opacity-80"></div>
-                                <div class="absolute bottom-0 left-0 w-8 h-8 border-b-[3px] border-l-[3px] border-green-500 rounded-bl-xl opacity-80"></div>
-                                <div class="absolute bottom-0 right-0 w-8 h-8 border-b-[3px] border-r-[3px] border-green-500 rounded-br-xl opacity-80"></div>
-                            </div>
-                            <div id="dynamic-barcode-wrapper" class="relative z-20 bg-white/95 backdrop-blur-md px-5 py-3 rounded-2xl shadow-xl barcode-enter flex items-center justify-center h-[75px] min-w-[160px] border border-black/5">
-                                <div id="dynamic-barcode-lines" class="flex gap-[2.5px] h-full items-center justify-center w-full"></div>
-                            </div>
-                            <div id="scanner-laser" class="absolute left-[10%] w-[80%] h-[3px] bg-green-500 shadow-[0_0_15px_#22c55e] z-30 transition-all ease-linear rounded-full" style="top: 5%; opacity: 0;"></div>
-                        </div>
-
-                        <div class="flex items-center gap-4 mb-6 px-2">
-                            <div class="h-px bg-[#E9E7EB] dark:bg-[#2A2B2E] flex-1"></div>
-                            <span class="text-[#40493D] dark:text-[#8B9389] text-sm font-medium">Or</span>
-                            <div class="h-px bg-[#E9E7EB] dark:bg-[#2A2B2E] flex-1"></div>
-                        </div>
-
-                        <div class="flex gap-3 px-2">
-                            <div class="flex-1 bg-[#F5F3F7] dark:bg-[#1B1B1E] rounded-[1.5rem] flex items-center px-5 h-[3.25rem]">
-                                <span translate="no" style="--icon: url('assets/icons/barcode_scanner.svg')" class="svg-icon text-[#8B9389] mr-3 text-[20px]" aria-hidden="true"></span>
-                                <span class="text-[#8B9389] text-[15px] font-medium tracking-wide">Manual Entry...</span>
-                            </div>
-                            <button class="w-[3.25rem] h-[3.25rem] bg-[#F5F3F7] dark:bg-[#1B1B1E] rounded-full flex items-center justify-center" aria-label="Go to manual entry">
-                                <span translate="no" style="--icon: url('assets/icons/chevron_right.svg')" class="svg-icon text-[#40493D] dark:text-[#C1C9BE]" aria-hidden="true"></span>
-                            </button>
-                        </div>
-                    </div>
-
-                    <div id="success-overlay" class="absolute inset-0 z-20 flex flex-col items-center justify-center success-overlay-enter bg-[#E2F4E3]/95 dark:bg-[#065314]/95 backdrop-blur-xl rounded-[2.5rem] border border-green-500/20">
-                        <div class="success-icon w-24 h-24 bg-[#0D631B] rounded-full flex items-center justify-center mb-6 shadow-xl shadow-[#0D631B]/30">
-                            <span translate="no" style="--icon: url('assets/icons/check.svg')" class="svg-icon text-white text-6xl" aria-hidden="true"></span>
-                        </div>
-                        <h2 class="font-extrabold text-4xl md:text-5xl tracking-tight mb-3 text-[#00390E] dark:text-[#9DF49E]">Done.</h2>
-                        <p class="text-[#0D631B] dark:text-[#81D683] text-lg font-medium text-center px-6">Safe in a split second.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+        </nav>
     </header>
 
-    <section class="py-24 bg-[#F5F3F7] dark:bg-[#151517] relative">
-        <div class="max-w-6xl mx-auto px-6 relative z-10">
-            <div class="text-center mb-16 fade-up">
-                <h2 class="text-3xl md:text-5xl font-bold mb-4">No compromises.</h2>
-                <p class="text-xl text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark">Your health is our only priority.</p>
+    <main>
+
+        <!-- HERO SECTION -->
+        <header class="relative pt-40 pb-24 px-6 min-h-[95vh] flex flex-col items-center justify-center">
+            <!-- Abstract Background Blobs -->
+            <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
+                <div class="bg-blob absolute top-[-5%] -left-20 w-[600px] h-[600px] bg-blue-100/60 dark:bg-[#003567]/30 blur-[90px] mix-blend-multiply dark:mix-blend-lighten"></div>
+                <div class="bg-blob absolute top-[43%] -right-20 w-[500px] h-[500px] bg-[#2E7D32]/25 dark:bg-[#065314]/40 blur-[100px] mix-blend-multiply dark:mix-blend-lighten" style="animation-delay: 2s;"></div>
             </div>
 
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="fade-up m3-card bg-white dark:bg-[#1B1B1E] p-8 rounded-[2rem] border border-[#E9E7EB] dark:border-[#2A2B2E]" style="transition-delay: 100ms;">
-                    <div class="w-14 h-14 bg-[#EBF1FF] dark:bg-[#003567]/40 text-[#003567] dark:text-[#54A0FE] rounded-full flex items-center justify-center mb-6">
-                        <span translate="no" style="--icon: url('assets/icons/volunteer_activism.svg')" class="svg-icon text-3xl" aria-hidden="true"></span>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-3">100% Free Forever</h3>
-                    <p class="text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark leading-relaxed">No subscriptions, no hidden fees, and zero ads. G-Scanner is a free tool built strictly to support the celiac and food intolerance community.</p>
-                </div>
-                <div class="fade-up m3-card bg-white dark:bg-[#1B1B1E] p-8 rounded-[2rem] border border-[#E9E7EB] dark:border-[#2A2B2E]" style="transition-delay: 200ms;">
-                    <div class="w-14 h-14 bg-[#E2F4E3] dark:bg-[#065314]/40 text-[#0D631B] dark:text-[#81D683] rounded-full flex items-center justify-center mb-6">
-                        <span translate="no" style="--icon: url('assets/icons/shield_person.svg')" class="svg-icon text-3xl" aria-hidden="true"></span>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-3">Privacy by Design</h3>
-                    <p class="text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark leading-relaxed">Zero tracking, your data stays entirely private. Your preferences and scan history are managed transparently and fully under your control</p>
-                </div>
-                <div class="fade-up m3-card bg-white dark:bg-[#1B1B1E] p-8 rounded-[2rem] border border-[#E9E7EB] dark:border-[#2A2B2E]" style="transition-delay: 300ms;">
-                    <div class="w-14 h-14 bg-[#FFF0E6] dark:bg-[#5C2D00]/40 text-[#AD5600] dark:text-[#FFB68A] rounded-full flex items-center justify-center mb-6">
-                        <span translate="no" style="--icon: url('assets/icons/group.svg')" class="svg-icon text-3xl" aria-hidden="true"></span>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-3">Community Driven</h3>
-                    <p class="text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark leading-relaxed">Powered by Open Food Facts, a global database updated by thousands worldwide. Enhanced by our internal user reporting system.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-24 px-6 max-w-5xl mx-auto relative flex flex-col items-center">
-        <div class="flex flex-col md:flex-row items-center gap-16 w-full mb-12">
-            <div class="flex-1 fade-up text-center md:text-left">
-                <h2 class="text-3xl md:text-5xl font-bold mb-6">As simple as a traffic light.</h2>
-                <p class="text-lg text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark mb-10 leading-relaxed">Decoding complex ingredient labels can be exhausting and risky. G-Scanner condenses nutritional data into three universally understood indicators.</p>
-
-                <div class="space-y-6 text-left">
-                    <div class="fade-up flex items-start gap-5 p-4 rounded-[1.5rem] hover:bg-[#F5F3F7] dark:hover:bg-[#1B1B1E] transition-colors" style="transition-delay: 100ms;">
-                        <div class="w-12 h-12 bg-[#E2F4E3] dark:bg-[#065314]/40 text-[#0D631B] dark:text-[#81D683] rounded-full flex items-center justify-center flex-shrink-0">
-                            <span translate="no" style="--icon: url('assets/icons/check_circle.svg')" class="svg-icon text-2xl" aria-hidden="true"></span>
-                        </div>
-                        <div>
-                            <h4 class="text-xl font-bold text-[#0D631B] dark:text-[#81D683]">Safe</h4>
-                            <p class="text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark mt-1">Ingredients are verified safe based on your strict dietary needs (e.g., completely gluten-free).</p>
-                        </div>
-                    </div>
-                    <div class="fade-up flex items-start gap-5 p-4 rounded-[1.5rem] hover:bg-[#F5F3F7] dark:hover:bg-[#1B1B1E] transition-colors" style="transition-delay: 200ms;">
-                        <div class="w-12 h-12 bg-[#FFF0E6] dark:bg-[#5C2D00]/40 text-[#AD5600] dark:text-[#FFB68A] rounded-full flex items-center justify-center flex-shrink-0">
-                            <span translate="no" style="--icon: url('assets/icons/warning.svg')" class="svg-icon text-2xl" aria-hidden="true"></span>
-                        </div>
-                        <div>
-                            <h4 class="text-xl font-bold text-[#AD5600] dark:text-[#FFB68A]">Uncertain</h4>
-                            <p class="text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark mt-1">Potential risks like factory cross-contamination. Always manually double-check the physical label.</p>
-                        </div>
-                    </div>
-                    <div class="fade-up flex items-start gap-5 p-4 rounded-[1.5rem] hover:bg-[#F5F3F7] dark:hover:bg-[#1B1B1E] transition-colors" style="transition-delay: 300ms;">
-                        <div class="w-12 h-12 bg-[#FFDAD6] dark:bg-[#93000A]/40 text-[#BA1A1A] dark:text-[#FFB4AB] rounded-full flex items-center justify-center flex-shrink-0">
-                            <span translate="no" style="--icon: url('assets/icons/cancel.svg')" class="svg-icon text-2xl" aria-hidden="true"></span>
-                        </div>
-                        <div>
-                            <h4 class="text-xl font-bold text-[#BA1A1A] dark:text-[#FFB4AB]">Forbidden</h4>
-                            <p class="text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark mt-1">Contains gluten or your restricted allergens. Strictly avoid consumption.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="flex-1 w-full flex justify-center fade-up" style="transition-delay: 200ms;">
-                <div class="relative w-72 h-[520px] bg-white dark:bg-[#1B1B1E] rounded-[2.5rem] border-[8px] border-[#F5F3F7] dark:border-[#242528] shadow-2xl overflow-hidden flex flex-col pt-8 px-5 group">
-                    <div class="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-[#F5F3F7] dark:bg-[#242528] rounded-b-3xl"></div>
-                    <div class="w-20 h-20 bg-[#E2F4E3] dark:bg-[#065314]/40 text-[#0D631B] dark:text-[#81D683] rounded-full flex items-center justify-center mx-auto mt-6 mb-4 group-hover:scale-110 transition-transform ease-m3 duration-500">
-                        <span translate="no" style="--icon: url('assets/icons/check_circle.svg')" class="svg-icon text-4xl" aria-hidden="true"></span>
-                    </div>
-                    <h3 class="text-center font-bold text-3xl mb-1 text-[#0D631B] dark:text-[#81D683]">SAFE</h3>
-                    <p class="text-center text-sm text-gray-500 dark:text-gray-400 mb-8 font-medium">Gluten-Free Oats</p>
-
-                    <div class="bg-[#FAF9FC] dark:bg-[#121214] rounded-3xl p-5 mb-4 border border-[#E9E7EB] dark:border-[#2A2B2E]">
-                        <p class="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wide font-bold mb-3 flex items-center gap-1">
-                            <span translate="no" style="--icon: url('assets/icons/leaderboard.svg')" class="svg-icon text-[16px]" aria-hidden="true"></span> Rating
-                        </p>
-                        <p class="text-sm font-medium flex items-center gap-2">Celiac friendly</p>
-                    </div>
-                    <div class="bg-[#FAF9FC] dark:bg-[#121214] rounded-3xl p-5 border border-[#E9E7EB] dark:border-[#2A2B2E]">
-                        <p class="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wide font-bold mb-3 flex items-center gap-1">
-                            <span translate="no" style="--icon: url('assets/icons/science.svg')" class="svg-icon text-[16px]" aria-hidden="true"></span> Ingredients
-                        </p>
-                        <p class="text-sm font-medium">Organic rolled oats</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="w-full max-w-4xl fade-blur-in bg-[#F5F3F7] dark:bg-[#151517] border border-[#E9E7EB] dark:border-[#2A2B2E] p-5 md:p-6 rounded-[2rem] flex items-start gap-4 text-left">
-            <div class="space-y-1 text-xs text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark leading-relaxed">
-                <p>
-                    G-Scanner is purely an informational tool and <strong>does not replace medical advice</strong>. Ratings 
-                    are generated based on crowdsourced data from the Open Food Facts collaborative database. You are 
-                    <strong>solely responsible</strong> for directly verifying the physical labels on products before purchase and consumption.
+            <div class="relative z-10 w-full max-w-3xl mx-auto text-center mb-16">
+                <h1 class="fade-up text-5xl md:text-7xl font-bold tracking-tight mb-6 text-md-sys-color-onSurface-light dark:text-md-sys-color-onSurface-dark leading-[1.1]">
+                    The food scanner <br class="hidden sm:block" /> built to protect you.
+                </h1>
+                <p class="fade-up text-lg md:text-xl text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark mb-10 leading-relaxed" style="transition-delay: 100ms;">
+                    Instantly check products for hidden gluten, suspicious additives, or lactose.
+                    No ads. No tracking. A 100% free tool for your dietary peace of mind.
                 </p>
+
+                <div class="fade-up flex flex-col sm:flex-row items-center justify-center gap-4" style="transition-delay: 200ms;">
+                    <a href="https://g-scanner.github.io/webapp/" class="anti-jitter w-full sm:w-auto bg-md-sys-color-primary-light dark:bg-md-sys-color-primary-dark text-md-sys-color-onPrimary-light dark:text-md-sys-color-onPrimary-dark px-8 py-4 rounded-full font-semibold text-lg flex items-center justify-center gap-2 hover:shadow-lg hover:-translate-y-1 transition-all ease-m3">
+                        <span translate="no" style="--icon: url('assets/icons/globe.svg')" class="svg-icon" aria-hidden="true"></span>
+                        Start WebApp
+                    </a>
+                    <a href="#download-section" class="anti-jitter w-full sm:w-auto bg-white/50 dark:bg-[#1B1B1E]/40 backdrop-blur-md text-md-sys-color-onSurface-light dark:text-md-sys-color-onSurface-dark px-8 py-4 rounded-full font-semibold text-lg flex items-center justify-center gap-2 hover:bg-white/80 dark:hover:bg-[#242528]/80 hover:-translate-y-1 transition-all ease-m3 border border-[#E9E7EB] dark:border-[#2A2B2E]">
+                        <span translate="no" style="--icon: url('assets/icons/android.svg')" class="svg-icon" aria-hidden="true"></span>
+                        Download App
+                    </a>
+                </div>
             </div>
-        </div>
-    </section>
 
-    <!-- About section -->
-    <section class="py-24 bg-[#F5F3F7] dark:bg-[#151517] perspective-1000 overflow-hidden relative">
-        <div class="max-w-4xl mx-auto px-6">
-            <div class="fly-in-3d w-full">
-                <div id="about-card" class="relative w-full transform-style-3d flip-transition cursor-pointer select-none hover-wave">
-                    
-                    <!-- Front Face -->
-                    <div class="bg-white dark:bg-[#1B1B1E] rounded-[2.5rem] p-8 md:p-12 shadow-sm border border-[#E9E7EB] dark:border-[#2A2B2E] flex flex-col md:flex-row items-center gap-10 backface-hidden z-20">
-                        <div class="w-32 h-32 md:w-36 md:h-36 flex-shrink-0 bg-[#E2F4E3] dark:bg-[#065314]/40 text-[#0D631B] dark:text-[#81D683] rounded-full flex items-center justify-center shadow-sm">
-                            <span id="waving-icon" translate="no" style="--icon: url('assets/icons/waving_hand.svg')" class="svg-icon text-7xl md:text-8xl" aria-hidden="true"></span>
-                        </div>
-                        <div class="text-center md:text-left">
-                            <h2 class="text-xs font-bold uppercase tracking-widest text-[#0D631B] dark:text-[#81D683] mb-2">Behind the project</h2>
-                            <h3 class="text-3xl font-bold mb-3 text-md-sys-color-onSurface-light dark:text-md-sys-color-onSurface-dark">Hi, I'm Emanuele.</h3>
-                            <p class="text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark leading-relaxed">
-                                I'm a Computer Science student at the <strong>University of Naples Federico II</strong>.
-                                I built G-Scanner out of a genuine personal need: navigating supermarket aisles shouldn't cause anxiety or require hours of label reading.
-                            </p>
-                        </div>
-                    </div>
+            <div class="relative z-10 w-full max-w-[420px] fade-up" style="transition-delay: 300ms;">
+                <div id="full-scanner-container" class="relative w-full h-[460px]">
+                    <div class="relative w-full h-full bg-white dark:bg-[#121214] rounded-[2.5rem] shadow-2xl border border-[#E9E7EB] dark:border-[#2A2B2E] overflow-hidden">
 
-                    <!-- Back Face (Easter Egg) -->
-                    <div class="absolute inset-0 bg-gradient-to-br from-pink-50 to-rose-100 dark:from-pink-950 dark:to-rose-900 rounded-[2.5rem] p-8 md:p-12 shadow-xl border border-pink-200 dark:border-pink-800 flex flex-col items-center justify-center backface-hidden rotate-y-180 z-10 text-center">
-                        <span translate="no" style="--icon: url('assets/icons/favorite.svg')" class="svg-icon text-rose-500 dark:text-rose-400 text-6xl mb-4" aria-hidden="true"></span>
-                        <h3 class="text-2xl md:text-3xl font-bold mb-2 text-rose-900 dark:text-rose-100">G-Scanner: G for Gluten?</h3>
-                        <p class="text-rose-700 dark:text-rose-300 font-medium">For me, the G stands for Giulia.</p>
+                        <div id="front-ui" class="absolute inset-0 flex flex-col p-6 pb-8 front-ui origin-center z-10 bg-white dark:bg-[#121214]">
+                            <div class="text-center mb-6 mt-2">
+                                <h2 class="font-bold text-2xl md:text-3xl text-gray-900 dark:text-gray-100 tracking-tight">Scan Product</h2>
+                                <p class="text-[15px] text-gray-600 dark:text-gray-400 mt-2 leading-snug px-4">Align the barcode within the frame.</p>
+                            </div>
+
+                            <div class="relative w-full aspect-video mb-6 bg-[#000000] rounded-[2rem] overflow-hidden flex items-center justify-center shadow-inner border border-gray-800">
+                                <div class="absolute inset-0 bg-[url(assets/images/scanner-bg.webp)] bg-cover bg-center opacity-30 blur-[4px]"></div>
+                                <div class="absolute inset-4 overflow-hidden pointer-events-none z-10">
+                                    <div class="absolute top-0 left-0 w-8 h-8 border-t-[3px] border-l-[3px] border-green-500 rounded-tl-xl opacity-80"></div>
+                                    <div class="absolute top-0 right-0 w-8 h-8 border-t-[3px] border-r-[3px] border-green-500 rounded-tr-xl opacity-80"></div>
+                                    <div class="absolute bottom-0 left-0 w-8 h-8 border-b-[3px] border-l-[3px] border-green-500 rounded-bl-xl opacity-80"></div>
+                                    <div class="absolute bottom-0 right-0 w-8 h-8 border-b-[3px] border-r-[3px] border-green-500 rounded-br-xl opacity-80"></div>
+                                </div>
+                                <div id="dynamic-barcode-wrapper" class="relative z-20 bg-white/95 backdrop-blur-md px-5 py-3 rounded-2xl shadow-xl barcode-enter flex items-center justify-center h-[75px] min-w-[160px] border border-black/5">
+                                    <div id="dynamic-barcode-lines" class="flex gap-[2.5px] h-full items-center justify-center w-full"></div>
+                                </div>
+                                <div id="scanner-laser" class="absolute left-[10%] w-[80%] h-[3px] bg-green-500 shadow-[0_0_15px_#22c55e] z-30 transition-all ease-linear rounded-full" style="top: 5%; opacity: 0;"></div>
+                            </div>
+
+                            <div class="flex items-center gap-4 mb-6 px-2">
+                                <div class="h-px bg-[#E9E7EB] dark:bg-[#2A2B2E] flex-1"></div>
+                                <span class="text-[#40493D] dark:text-[#8B9389] text-sm font-medium">Or</span>
+                                <div class="h-px bg-[#E9E7EB] dark:bg-[#2A2B2E] flex-1"></div>
+                            </div>
+
+                            <div class="flex gap-3 px-2">
+                                <div class="flex-1 bg-[#F5F3F7] dark:bg-[#1B1B1E] rounded-[1.5rem] flex items-center px-5 h-[3.25rem]">
+                                    <span translate="no" style="--icon: url('assets/icons/barcode_scanner.svg')" class="svg-icon text-[#8B9389] mr-3 text-[20px]" aria-hidden="true"></span>
+                                    <span class="text-[#8B9389] text-[15px] font-medium tracking-wide">Manual Entry...</span>
+                                </div>
+                                <button class="w-[3.25rem] h-[3.25rem] bg-[#F5F3F7] dark:bg-[#1B1B1E] rounded-full flex items-center justify-center" aria-label="Go to manual entry">
+                                    <span translate="no" style="--icon: url('assets/icons/chevron_right.svg')" class="svg-icon text-[#40493D] dark:text-[#C1C9BE]" aria-hidden="true"></span>
+                                </button>
+                            </div>
+                        </div>
+
+                        <div id="success-overlay" class="absolute inset-0 z-20 flex flex-col items-center justify-center success-overlay-enter bg-[#E2F4E3]/95 dark:bg-[#065314]/95 backdrop-blur-xl rounded-[2.5rem] border border-green-500/20">
+                            <div class="success-icon w-24 h-24 bg-[#0D631B] rounded-full flex items-center justify-center mb-6 shadow-xl shadow-[#0D631B]/30">
+                                <span translate="no" style="--icon: url('assets/icons/check.svg')" class="svg-icon text-white text-6xl" aria-hidden="true"></span>
+                            </div>
+                            <h2 class="font-extrabold text-4xl md:text-5xl tracking-tight mb-3 text-[#00390E] dark:text-[#9DF49E]">Done.</h2>
+                            <p class="text-[#0D631B] dark:text-[#81D683] text-lg font-medium text-center px-6">Safe in a split second.</p>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </header>
 
-    <section id="download-section" class="py-24 px-6 max-w-5xl mx-auto text-center">
-        <div class="max-w-2xl mx-auto flex flex-col items-center">
-            <span translate="no" style="--icon: url('assets/icons/install_mobile.svg')" class="pop-in svg-icon text-6xl mb-6 text-md-sys-color-primary-light dark:text-md-sys-color-primary-dark drop-shadow-sm" aria-hidden="true"></span>
-            <h2 class="fade-up text-3xl md:text-5xl font-bold mb-6" style="transition-delay: 100ms;">Take the scanner with you.</h2>
-            <p class="fade-up text-lg text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark mb-10 leading-relaxed" style="transition-delay: 200ms;">
-                Download the APK for Android to get a blazing-fast, native experience. Minimal storage required, maximum time saved during your grocery shopping.
-            </p>
+        <section class="py-24 bg-[#F5F3F7] dark:bg-[#151517] relative">
+            <div class="max-w-6xl mx-auto px-6 relative z-10">
+                <div class="text-center mb-16 fade-up">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-4">No compromises.</h2>
+                    <p class="text-xl text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark">Your health is our only priority.</p>
+                </div>
 
-            <div class="slide-up-bounce w-full flex justify-center" style="transition-delay: 300ms;">
-                <a href="assets/apk/G-Scanner.apk" download="G-Scanner.apk" class="anti-jitter inline-flex bg-[#F5F3F7] dark:bg-[#1B1B1E] text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark px-10 py-5 rounded-full font-bold text-lg items-center justify-center gap-3 hover:bg-opacity-80 hover:-translate-y-1 transition-all ease-m3 shadow-sm border border-[#E9E7EB] dark:border-[#2A2B2E] mb-10">
-                    <span translate="no" style="--icon: url('assets/icons/android.svg')" class="svg-icon text-[24px]" aria-hidden="true"></span>
-                    Download Android APK
-                </a>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="fade-up m3-card bg-white dark:bg-[#1B1B1E] p-8 rounded-[2rem] border border-[#E9E7EB] dark:border-[#2A2B2E]" style="transition-delay: 100ms;">
+                        <div class="w-14 h-14 bg-[#EBF1FF] dark:bg-[#003567]/40 text-[#003567] dark:text-[#54A0FE] rounded-full flex items-center justify-center mb-6">
+                            <span translate="no" style="--icon: url('assets/icons/volunteer_activism.svg')" class="svg-icon text-3xl" aria-hidden="true"></span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3">100% Free Forever</h3>
+                        <p class="text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark leading-relaxed">No subscriptions, no hidden fees, and zero ads. G-Scanner is a free tool built strictly to support the celiac and food intolerance community.</p>
+                    </div>
+                    <div class="fade-up m3-card bg-white dark:bg-[#1B1B1E] p-8 rounded-[2rem] border border-[#E9E7EB] dark:border-[#2A2B2E]" style="transition-delay: 200ms;">
+                        <div class="w-14 h-14 bg-[#E2F4E3] dark:bg-[#065314]/40 text-[#0D631B] dark:text-[#81D683] rounded-full flex items-center justify-center mb-6">
+                            <span translate="no" style="--icon: url('assets/icons/shield_person.svg')" class="svg-icon text-3xl" aria-hidden="true"></span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3">Privacy by Design</h3>
+                        <p class="text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark leading-relaxed">Zero tracking, your data stays entirely private. Your preferences and scan history are managed transparently and fully under your control</p>
+                    </div>
+                    <div class="fade-up m3-card bg-white dark:bg-[#1B1B1E] p-8 rounded-[2rem] border border-[#E9E7EB] dark:border-[#2A2B2E]" style="transition-delay: 300ms;">
+                        <div class="w-14 h-14 bg-[#FFF0E6] dark:bg-[#5C2D00]/40 text-[#AD5600] dark:text-[#FFB68A] rounded-full flex items-center justify-center mb-6">
+                            <span translate="no" style="--icon: url('assets/icons/group.svg')" class="svg-icon text-3xl" aria-hidden="true"></span>
+                        </div>
+                        <h3 class="text-2xl font-bold mb-3">Community Driven</h3>
+                        <p class="text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark leading-relaxed">Powered by Open Food Facts, a global database updated by thousands worldwide. Enhanced by our internal user reporting system.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="py-24 px-6 max-w-5xl mx-auto relative flex flex-col items-center">
+            <div class="flex flex-col md:flex-row items-center gap-16 w-full mb-12">
+                <div class="flex-1 fade-up text-center md:text-left">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-6">As simple as a traffic light.</h2>
+                    <p class="text-lg text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark mb-10 leading-relaxed">Decoding complex ingredient labels can be exhausting and risky. G-Scanner condenses nutritional data into three universally understood indicators.</p>
+
+                    <div class="space-y-6 text-left">
+                        <div class="fade-up flex items-start gap-5 p-4 rounded-[1.5rem] hover:bg-[#F5F3F7] dark:hover:bg-[#1B1B1E] transition-colors" style="transition-delay: 100ms;">
+                            <div class="w-12 h-12 bg-[#E2F4E3] dark:bg-[#065314]/40 text-[#0D631B] dark:text-[#81D683] rounded-full flex items-center justify-center flex-shrink-0">
+                                <span translate="no" style="--icon: url('assets/icons/check_circle.svg')" class="svg-icon text-2xl" aria-hidden="true"></span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-[#0D631B] dark:text-[#81D683]">Safe</h3>
+                                <p class="text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark mt-1">Ingredients are verified safe based on your strict dietary needs (e.g., completely gluten-free).</p>
+                            </div>
+                        </div>
+                        <div class="fade-up flex items-start gap-5 p-4 rounded-[1.5rem] hover:bg-[#F5F3F7] dark:hover:bg-[#1B1B1E] transition-colors" style="transition-delay: 200ms;">
+                            <div class="w-12 h-12 bg-[#FFF0E6] dark:bg-[#5C2D00]/40 text-[#AD5600] dark:text-[#FFB68A] rounded-full flex items-center justify-center flex-shrink-0">
+                                <span translate="no" style="--icon: url('assets/icons/warning.svg')" class="svg-icon text-2xl" aria-hidden="true"></span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-[#AD5600] dark:text-[#FFB68A]">Uncertain</h3>
+                                <p class="text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark mt-1">Potential risks like factory cross-contamination. Always manually double-check the physical label.</p>
+                            </div>
+                        </div>
+                        <div class="fade-up flex items-start gap-5 p-4 rounded-[1.5rem] hover:bg-[#F5F3F7] dark:hover:bg-[#1B1B1E] transition-colors" style="transition-delay: 300ms;">
+                            <div class="w-12 h-12 bg-[#FFDAD6] dark:bg-[#93000A]/40 text-[#BA1A1A] dark:text-[#FFB4AB] rounded-full flex items-center justify-center flex-shrink-0">
+                                <span translate="no" style="--icon: url('assets/icons/cancel.svg')" class="svg-icon text-2xl" aria-hidden="true"></span>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-[#BA1A1A] dark:text-[#FFB4AB]">Forbidden</h3>
+                                <p class="text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark mt-1">Contains gluten or your restricted allergens. Strictly avoid consumption.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="flex-1 w-full flex justify-center fade-up" style="transition-delay: 200ms;">
+                    <div class="relative w-72 h-[520px] bg-white dark:bg-[#1B1B1E] rounded-[2.5rem] border-[8px] border-[#F5F3F7] dark:border-[#242528] shadow-2xl overflow-hidden flex flex-col pt-8 px-5 group">
+                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-[#F5F3F7] dark:bg-[#242528] rounded-b-3xl"></div>
+                        <div class="w-20 h-20 bg-[#E2F4E3] dark:bg-[#065314]/40 text-[#0D631B] dark:text-[#81D683] rounded-full flex items-center justify-center mx-auto mt-6 mb-4 group-hover:scale-110 transition-transform ease-m3 duration-500">
+                            <span translate="no" style="--icon: url('assets/icons/check_circle.svg')" class="svg-icon text-4xl" aria-hidden="true"></span>
+                        </div>
+                        <h3 class="text-center font-bold text-3xl mb-1 text-[#0D631B] dark:text-[#81D683]">SAFE</h3>
+                        <p class="text-center text-sm text-gray-500 dark:text-gray-400 mb-8 font-medium">Gluten-Free Oats</p>
+
+                        <div class="bg-[#FAF9FC] dark:bg-[#121214] rounded-3xl p-5 mb-4 border border-[#E9E7EB] dark:border-[#2A2B2E]">
+                            <p class="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wide font-bold mb-3 flex items-center gap-1">
+                                <span translate="no" style="--icon: url('assets/icons/leaderboard.svg')" class="svg-icon text-[16px]" aria-hidden="true"></span> Rating
+                            </p>
+                            <p class="text-sm font-medium flex items-center gap-2">Celiac friendly</p>
+                        </div>
+                        <div class="bg-[#FAF9FC] dark:bg-[#121214] rounded-3xl p-5 border border-[#E9E7EB] dark:border-[#2A2B2E]">
+                            <p class="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wide font-bold mb-3 flex items-center gap-1">
+                                <span translate="no" style="--icon: url('assets/icons/science.svg')" class="svg-icon text-[16px]" aria-hidden="true"></span> Ingredients
+                            </p>
+                            <p class="text-sm font-medium">Organic rolled oats</p>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <!-- Download disclaimer -->
-            <div class="fade-blur-in w-full bg-[#F5F3F7] dark:bg-[#151517] border border-[#E9E7EB] dark:border-[#2A2B2E] p-5 md:p-6 rounded-[2rem] flex items-start gap-4 text-left">
+            <div class="w-full max-w-4xl fade-blur-in bg-[#F5F3F7] dark:bg-[#151517] border border-[#E9E7EB] dark:border-[#2A2B2E] p-5 md:p-6 rounded-[2rem] flex items-start gap-4 text-left">
                 <div class="space-y-1 text-xs text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark leading-relaxed">
                     <p>
-                        Manual installation of the APK file (sideloading) is done entirely at your <strong>own risk</strong>.
-                        By proceeding with the download, you explicitly agree to our 
-                        <a href="TermsOfService.html" class="underline font-medium hover:text-md-sys-color-onSurface-light dark:hover:text-md-sys-color-onSurface-dark transition-colors">Terms of Service</a> and 
-                        <a href="PrivacyPolicy.html" class="underline font-medium hover:text-md-sys-color-onSurface-light dark:hover:text-md-sys-color-onSurface-dark transition-colors">Privacy Policy</a>.
+                        G-Scanner is purely an informational tool and <strong>does not replace medical advice</strong>. Ratings 
+                        are generated based on crowdsourced data from the Open Food Facts collaborative database. You are 
+                        <strong>solely responsible</strong> for directly verifying the physical labels on products before purchase and consumption.
                     </p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <!-- About section -->
+        <section class="py-24 bg-[#F5F3F7] dark:bg-[#151517] perspective-1000 overflow-hidden relative">
+            <div class="max-w-4xl mx-auto px-6">
+                <div class="fly-in-3d w-full">
+                    <div id="about-card" class="relative w-full transform-style-3d flip-transition cursor-pointer select-none hover-wave">
+                        
+                        <!-- Front Face -->
+                        <div class="bg-white dark:bg-[#1B1B1E] rounded-[2.5rem] p-8 md:p-12 shadow-sm border border-[#E9E7EB] dark:border-[#2A2B2E] flex flex-col md:flex-row items-center gap-10 backface-hidden z-20">
+                            <div class="w-32 h-32 md:w-36 md:h-36 flex-shrink-0 bg-[#E2F4E3] dark:bg-[#065314]/40 text-[#0D631B] dark:text-[#81D683] rounded-full flex items-center justify-center shadow-sm">
+                                <span id="waving-icon" translate="no" style="--icon: url('assets/icons/waving_hand.svg')" class="svg-icon text-7xl md:text-8xl" aria-hidden="true"></span>
+                            </div>
+                            <div class="text-center md:text-left">
+                                <h2 class="text-xs font-bold uppercase tracking-widest text-[#0D631B] dark:text-[#81D683] mb-2">Behind the project</h2>
+                                <h3 class="text-3xl font-bold mb-3 text-md-sys-color-onSurface-light dark:text-md-sys-color-onSurface-dark">Hi, I'm Emanuele.</h3>
+                                <p class="text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark leading-relaxed">
+                                    I'm a Computer Science student at the <strong>University of Naples Federico II</strong>.
+                                    I built G-Scanner out of a genuine personal need: navigating supermarket aisles shouldn't cause anxiety or require hours of label reading.
+                                </p>
+                            </div>
+                        </div>
+
+                        <!-- Back Face (Easter Egg) -->
+                        <div class="absolute inset-0 bg-gradient-to-br from-pink-50 to-rose-100 dark:from-pink-950 dark:to-rose-900 rounded-[2.5rem] p-8 md:p-12 shadow-xl border border-pink-200 dark:border-pink-800 flex flex-col items-center justify-center backface-hidden rotate-y-180 z-10 text-center">
+                            <span translate="no" style="--icon: url('assets/icons/favorite.svg')" class="svg-icon text-rose-500 dark:text-rose-400 text-6xl mb-4" aria-hidden="true"></span>
+                            <h3 class="text-2xl md:text-3xl font-bold mb-2 text-rose-900 dark:text-rose-100">G-Scanner: G for Gluten?</h3>
+                            <p class="text-rose-700 dark:text-rose-300 font-medium">For me, the G stands for Giulia.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="download-section" class="py-24 px-6 max-w-5xl mx-auto text-center">
+            <div class="max-w-2xl mx-auto flex flex-col items-center">
+                <span translate="no" style="--icon: url('assets/icons/install_mobile.svg')" class="pop-in svg-icon text-6xl mb-6 text-md-sys-color-primary-light dark:text-md-sys-color-primary-dark drop-shadow-sm" aria-hidden="true"></span>
+                <h2 class="fade-up text-3xl md:text-5xl font-bold mb-6" style="transition-delay: 100ms;">Take the scanner with you.</h2>
+                <p class="fade-up text-lg text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark mb-10 leading-relaxed" style="transition-delay: 200ms;">
+                    Download the APK for Android to get a blazing-fast, native experience. Minimal storage required, maximum time saved during your grocery shopping.
+                </p>
+
+                <div class="slide-up-bounce w-full flex justify-center" style="transition-delay: 300ms;">
+                    <a href="assets/apk/G-Scanner.apk" download="G-Scanner.apk" class="anti-jitter inline-flex bg-[#F5F3F7] dark:bg-[#1B1B1E] text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark px-10 py-5 rounded-full font-bold text-lg items-center justify-center gap-3 hover:bg-opacity-80 hover:-translate-y-1 transition-all ease-m3 shadow-sm border border-[#E9E7EB] dark:border-[#2A2B2E] mb-10">
+                        <span translate="no" style="--icon: url('assets/icons/android.svg')" class="svg-icon text-[24px]" aria-hidden="true"></span>
+                        Download Android APK
+                    </a>
+                </div>
+
+                <!-- Download disclaimer -->
+                <div class="fade-blur-in w-full bg-[#F5F3F7] dark:bg-[#151517] border border-[#E9E7EB] dark:border-[#2A2B2E] p-5 md:p-6 rounded-[2rem] flex items-start gap-4 text-left">
+                    <div class="space-y-1 text-xs text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark leading-relaxed">
+                        <p>
+                            Manual installation of the APK file (sideloading) is done entirely at your <strong>own risk</strong>.
+                            By proceeding with the download, you explicitly agree to our 
+                            <a href="TermsOfService.html" class="underline font-medium hover:text-md-sys-color-onSurface-light dark:hover:text-md-sys-color-onSurface-dark transition-colors">Terms of Service</a> and 
+                            <a href="PrivacyPolicy.html" class="underline font-medium hover:text-md-sys-color-onSurface-light dark:hover:text-md-sys-color-onSurface-dark transition-colors">Privacy Policy</a>.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
 
     <footer class="bg-[#F5F3F7] dark:bg-[#0E0E10] py-12 px-6 border-t border-[#E9E7EB] dark:border-[#242528] relative mt-12">
         <div class="footer-reveal max-w-4xl mx-auto flex flex-col items-center text-center">
