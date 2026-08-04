@@ -1,3 +1,5 @@
+// Copyright (c) 2026 Emanuele Ciotola. All Rights Reserved.
+// PROJECT: G-Scanner — See LICENSE file in root for terms.
 // ==========================================
 // 1. THEME TOGGLE (Solo logica del click)
 // ==========================================
@@ -90,7 +92,7 @@ async function runFullScannerSequence() {
         successOverlay.classList.remove('show-success-overlay');
         frontUI.classList.remove('dim-front-ui');
         scannerLaser.style.transition = 'none';
-        scannerLaser.style.top = '5%';
+        scannerLaser.style.top = '12%';
         scannerLaser.style.opacity = '0';
 
         let waitTime = isFirstScan ? 500 : 1500;
@@ -107,7 +109,7 @@ async function runFullScannerSequence() {
 
         scannerLaser.style.transition = 'top 0.7s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.1s';
         scannerLaser.style.opacity = '1';
-        scannerLaser.style.top = '95%';
+        scannerLaser.style.top = '86%';
 
         await sleep(700);
         if (!isScannerVisible || currentSeq !== sequenceId) break;
