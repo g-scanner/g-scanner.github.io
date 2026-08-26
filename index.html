@@ -1,444 +1,283 @@
-<!DOCTYPE html>
-<!--
-Copyright (c) 2026 Emanuele Ciotola. All Rights Reserved.
-PROJECT: G-Scanner — See LICENSE file in root for terms.
--->
-<html lang="en">
+<!-- Copyright (c) 2026 Emanuele Ciotola. All Rights Reserved.\nPROJECT: G-Scanner — See LICENSE file in root for terms. --><!DOCTYPE html><!-- Il default è l'inglese per assecondare Googlebot --><html lang="en"><head>
+  <!-- BASE HREF per GitHub Pages (Sottocartella della WebApp) -->
+  <base href="/webapp/">
+  <meta charset="UTF-8">
+  <meta content="IE=Edge" http-equiv="X-UA-Compatible">
 
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="google-site-verification" content="W4m6-Cg3xkpEOSg0rzPIgE6C3gl7yw95aOWXSdd87gM" />
-    
-    <!-- Base SEO -->
-    <title>G-Scanner - Free Gluten, Lactose & Food Scanner App</title>
-    <meta name="description" content="Scan food barcodes instantly to detect hidden gluten, lactose, and suspicious additives. A 100% free, privacy-focused ingredient scanner for celiacs and food intolerances.">
-    <meta name="keywords" content="gluten free food scanner, celiac barcode app, ingredient checker, lactose intolerance app, additive scanner, open food facts, free food barcode scanner, vegan scanner">
-    <meta name="author" content="Emanuele Ciotola">
-    <meta name="theme-color" content="#BFDEB4">
-    <link rel="icon" href="assets/logo/favicon.ico" sizes="16x16 32x32 48x48">
-    <link rel="icon" href="assets/logo/icon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="assets/logo/apple-touch-icon.png">
-    <link rel="manifest" href="site.webmanifest">
+  <!-- Base SEO -->
+  <title>G-Scanner - Free Gluten, Lactose &amp; Food Scanner App</title>
+  <meta name="description" content="Scan food barcodes instantly to detect hidden gluten, lactose, and suspicious additives. A 100% free, privacy-focused ingredient scanner for celiacs and food intolerances.">
+  <meta name="keywords" content="gluten free food scanner, celiac barcode app, ingredient checker, lactose intolerance app, additive scanner, open food facts, free food barcode scanner, vegan scanner">
+  <meta name="author" content="Emanuele Ciotola">
+  <meta name="theme-color" content="#BFDEB4">
+  <link rel="icon" href="icons/favicon.ico" sizes="16x16 32x32 48x48">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icons/apple-touch-icon.png">
+  <link rel="manifest" href="manifest.json">
+  
+  <!-- ICONE (iOS e PWA) -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="G-Scanner">
+  <link rel="apple-touch-icon" href="icons/Icon-192.png">
+  <link rel="icon" type="image/png" href="favicon.png">
 
-    <!-- Canonical & Hreflang -->
-    <link rel="canonical" href="https://g-scanner.github.io">
-    <link rel="alternate" hreflang="en" href="https://g-scanner.github.io">
-    <link rel="alternate" hreflang="it" href="https://g-scanner.github.io/it/">
-    <link rel="alternate" hreflang="es" href="https://g-scanner.github.io/es/">
-    <link rel="alternate" hreflang="de" href="https://g-scanner.github.io/de/">
-    <link rel="alternate" hreflang="fr" href="https://g-scanner.github.io/fr/">
-    <link rel="alternate" hreflang="x-default" href="https://g-scanner.github.io">
+  <!-- VERIFICA OAUTH2 -->
+  <meta name="google-signin-client_id" content="1026607445667-17rnkrlq2rb5csff47m8832htnco8964.apps.googleusercontent.com">
 
-    <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://g-scanner.github.io">
-    <meta property="og:title" content="G-Scanner - The Ultimate Free Food & Gluten Scanner">
-    <meta property="og:description" content="Instantly check food ingredients for gluten, lactose, and harmful additives. Designed for your health. 100% Free & No Ads.">    
-    <meta property="og:image" content="https://g-scanner.github.io/assets/images/seo-banner.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:image:type" content="image/png">
-    <meta property="og:image" content="https://g-scanner.github.io/assets/images/seo-banner-square.png">
-    <meta property="og:image:width" content="800">
-    <meta property="og:image:height" content="800">
-    <meta property="og:image:type" content="image/png">
+  <!-- DIRETTIVE ROBOTS E IA -->
+  <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+  <meta name="Google-Extended" content="noindex">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <script>window.flutterfire_web_sdk_version = '12.17.0';</script>
 
-    <!-- Twitter Cards -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="G-Scanner - Safe Eating, Simplified.">
-    <meta name="twitter:description" content="Scan barcodes to check for gluten, lactose, and additives. Zero ads, maximum privacy.">
-    <meta name="twitter:image" content="https://g-scanner.github.io/assets/images/seo-banner.png">
+  <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://g-scanner.github.io/webapp/">
+  <meta property="og:title" content="G-Scanner - The Ultimate Free Food &amp; Gluten Scanner">
+  <meta property="og:description" content="Instantly check food ingredients for gluten, lactose, and harmful additives. Designed for your health. 100% Free &amp; No Ads.">    
+  <meta property="og:image" content="https://g-scanner.github.io/assets/images/seo-banner.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:type" content="image/png">
+  <meta property="og:image" content="https://g-scanner.github.io/assets/images/seo-banner-square.png">
+  <meta property="og:image:width" content="800">
+  <meta property="og:image:height" content="800">
+  <meta property="og:image:type" content="image/png">
 
-    <!-- Structured Data (JSON-LD) for Software & App SEO -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "G-Scanner",
-      "url": "https://g-scanner.github.io",
-      
-      "description": "Scan food barcodes to instantly discover the presence of gluten, suspicious additives, or lactose. A totally free, ad-free mobile and web app.",
-      "applicationCategory": "HealthAndFitnessApplication",
-      "operatingSystem": "Web, Android",
+  <!-- Twitter Cards -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="G-Scanner - Safe Eating, Simplified.">
+  <meta name="twitter:description" content="Scan barcodes to check for gluten, lactose, and additives. Zero ads, maximum privacy.">
+  <meta name="twitter:image" content="https://g-scanner.github.io/assets/images/seo-banner.png">
 
-      "offers": {
-        "@type": "Offer",
-        "price": "0.00",
-        "priceCurrency": "USD"
+  <!-- CANONICAL -->
+  <link rel="canonical" href="https://g-scanner.github.io/webapp/">
+
+  <!-- SCRIPT DI TRADUZIONE DINAMICA (Eseguito istantaneamente) -->
+  <script>
+    const translations = {
+      "it": {
+        title: "G-Scanner | Scansiona Con Un Tap e Dici Addio a Glutine e Lattosio",
+        desc: "Scansiona i codici a barre degli alimenti con G-Scanner. Scopri istantaneamente la presenza di glutine, additivi sospetti o lattosio. Gratuita e senza pubblicità!",
+        ogDesc: "Semplifica la tua spesa con G-Scanner! Inquadra il codice a barre e scopri subito se un prodotto è adatto alla tua dieta. 100% gratuita e zero pubblicità.",
+        bodyHtml: `<h1>G-Scanner: Lo Scanner Alimentare</h1>
+                   <p>G-Scanner è un'app gratuita sviluppata da Emanuele Ciotola che ti aiuta a consultare istantaneamente le informazioni sui prodotti alimentari. Sfruttando Open Food Facts, offre filtri per:</p>
+                   <ul><li><strong>Celiachia:</strong> Filtro per glutine o tracce.</li><li><strong>Additivi:</strong> Segnalazione amidi modificati e aromi.</li><li><strong>Lattosio:</strong> Ricerca di latte, burro, siero.</li></ul>
+                   <p>Risultato immediato con semaforo (Verde, Giallo, Rosso). <em>Solo scopo informativo.</em></p>`
       },
-      "featureList": [
-        "Barcode ingredient scanning",
-        "Open Food Facts database integration",
-        "Celiac strict gluten filter",
-        "Lactose intolerance detection",
-        "Suspicious food additives warning",
-        "Traffic light rating system (Green, Yellow, Red)",
-        "Ad-free, tracking-free privacy"
-      ],
+      "es": {
+        title: "G-Scanner | Escanea con un toque y dile adiós al gluten y la lactosa",
+        desc: "Escanea códigos de barras de alimentos con G-Scanner. Descubre al instante gluten, aditivos sospechosos o lactosa. ¡Gratis y sin publicidad!",
+        ogDesc: "¡Simplifica tus compras! Escanea el código de barras y descubre al instante si un producto se adapta a tu dieta. 100% gratis y sin anuncios.",
+        bodyHtml: `<h1>G-Scanner: El Escáner de Alimentos</h1>
+                   <p>G-Scanner es una aplicación gratuita desarrollada por Emanuele Ciotola para consultar información de productos alimenticios. Utiliza Open Food Facts y ofrece filtros para:</p>
+                   <ul><li><strong>Celiaquía:</strong> Filtro de gluten o trazas.</li><li><strong>Aditivos:</strong> Alerta de almidones y aromas.</li><li><strong>Lactosa:</strong> Búsqueda de leche, mantequilla, suero.</li></ul>
+                   <p>Resultado con semáforo (Verde, Amarillo, Rojo). <em>Solo con fines informativos.</em></p>`
+      },
+      "fr": {
+        title: "G-Scanner | Scannez d'un geste et dites adieu au gluten et au lactose",
+        desc: "Scannez les codes-barres des aliments avec G-Scanner. Découvrez instantanément le gluten, les additifs suspects ou le lactose. Gratuit et sans pub !",
+        ogDesc: "Simplifiez vos courses ! Scannez le code-barres et découvrez si un produit convient à votre régime. 100% gratuit et sans publicité.",
+        bodyHtml: `<h1>G-Scanner : Le Scanner Alimentaire</h1>
+                   <p>G-Scanner est une application gratuite développée par Emanuele Ciotola pour vérifier les produits alimentaires. Basée sur Open Food Facts, elle propose des filtres pour :</p>
+                   <ul><li><strong>Maladie Cœliaque :</strong> Filtre pour le gluten ou les traces.</li><li><strong>Additifs :</strong> Alerte sur les amidons et arômes.</li><li><strong>Lactose :</strong> Recherche de lait, beurre, lactosérum.</li></ul>
+                   <p>Résultat par feu tricolore (Vert, Jaune, Rouge). <em>À but informatif uniquement.</em></p>`
+      },
+      "de": {
+        title: "G-Scanner | Scannen mit einem Klick und Tschüss zu Gluten und Laktose",
+        desc: "Scannen Sie Lebensmittel-Barcodes mit G-Scanner. Entdecken Sie sofort Gluten, verdächtige Zusatzstoffe oder Laktose. Kostenlos und werbefrei!",
+        ogDesc: "Vereinfachen Sie Ihren Einkauf! Scannen Sie den Barcode und finden Sie heraus, ob ein Produkt zu Ihrer Ernährung passt. 100% kostenlos.",
+        bodyHtml: `<h1>G-Scanner: Der Lebensmittel-Scanner</h1>
+                   <p>G-Scanner ist eine kostenlose App von Emanuele Ciotola zur Überprüfung von Lebensmitteln. Basierend auf Open Food Facts bietet sie Filter für:</p>
+                   <ul><li><strong>Zöliakie:</strong> Filter für Gluten oder Spuren.</li><li><strong>Zusatzstoffe:</strong> Warnung vor Stärken und Aromen.</li><li><strong>Laktose:</strong> Suche nach Milch, Butter, Molke.</li></ul>
+                   <p>Ampel-Ergebnis (Grün, Gelb, Rot). <em>Nur zu Informationszwecken.</em></p>`
+      }
+    };
 
-      "termsOfService": "https://g-scanner.github.io/TermsOfService.html",
-      "privacyPolicy": "https://g-scanner.github.io/PrivacyPolicy.html"
+    // Lettura della lingua del browser (es. "it-IT" -> "it")
+    const userLang = (navigator.language || navigator.userLanguage).substring(0, 2).toLowerCase();
+    const t = translations[userLang];
+
+    // Se la lingua è supportata, cambia i tag (se è inglese usa il default dell'HTML)
+    if (t) {
+      document.documentElement.lang = userLang;
+      document.title = t.title;
+      document.querySelector('meta[name="description"]').setAttribute("content", t.desc);
+      document.querySelector('meta[property="og:title"]').setAttribute("content", t.title);
+      document.querySelector('meta[property="og:description"]').setAttribute("content", t.ogDesc);
+      document.querySelector('meta[name="twitter:title"]').setAttribute("content", t.title);
+      document.querySelector('meta[name="twitter:description"]').setAttribute("content", t.desc);
+      
+      // Aspetta che il body carichi per tradurre il testo SEO
+      document.addEventListener("DOMContentLoaded", function() {
+        const seoDiv = document.getElementById("seo-fallback");
+        if(seoDiv) seoDiv.innerHTML = t.bodyHtml;
+      });
     }
-    </script>
+  </script>
 
-    <!-- Local Fonts Preload (PageSpeed 100) -->
-    <link rel="preload" href="assets/fonts/outfit.woff2" as="font" type="font/woff2" crossorigin>
+  <!-- DATI STRUTTURATI (SCHEMA.ORG) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "G-Scanner",
+    "url": "https://g-scanner.github.io/webapp/",
 
-    <!-- External CSS -->
-    <link rel="preload" as="style" href="style.css">
-    <link rel="stylesheet" href="style.css">
-    
-    <!-- External JS -->
-    <script> 
-        // Applica il tema istantaneamente (Nessun lampo bianco)
-        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            document.documentElement.classList.add('dark');
-        } else {
-            document.documentElement.classList.remove('dark');
-        }
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://g-scanner.github.io/"
+    },
 
-        // Ascolta in tempo reale i cambiamenti del sistema operativo
-        window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
-            // Cambia in tempo reale SOLO SE l'utente non ha forzato una scelta manuale col bottone
-            if (!('theme' in localStorage)) {
-                if (e.matches) {
-                    document.documentElement.classList.add('dark');
-                } else {
-                    document.documentElement.classList.remove('dark');
-                }
-            }
-        });
-    </script>
-    <script src="script.js" defer></script>
+    "sameAs": [
+      "https://g-scanner.github.io/it/",
+      "https://g-scanner.github.io/es/",
+      "https://g-scanner.github.io/fr/",
+      "https://g-scanner.github.io/de/"
+    ],
+
+    "description": "Scan food barcodes to instantly discover the presence of gluten, suspicious additives, or lactose. A totally free, ad-free mobile and web app.",
+    "applicationCategory": "HealthAndFitnessApplication",
+    "operatingSystem": "Android, Web",
+    "author": {
+      "@type": "Person",
+      "name": "Emanuele Ciotola"
+    },
+    "offers": {
+      "@type": "Offer",
+      "price": "0.00",
+      "priceCurrency": "EUR"
+    },
+    "featureList": [
+      "Barcode scanning",
+      "Open Food Facts database",
+      "Celiac strict gluten filter",
+      "Lactose intolerance filter",
+      "Suspicious additives warning",
+      "Traffic light system (Green, Yellow, Red)",
+      "Ad-free, privacy focused"
+    ],
+
+    "termsOfService": "https://g-scanner.github.io/termsofservice.html",
+    "privacyPolicy": "https://g-scanner.github.io/privacypolicy.html"
+  }
+  </script>
+
+  
+  
+  <style id="splash-screen-style">
+    html {
+      height: 100%
+    }
+
+    body {
+      margin: 0;
+      min-height: 100%;
+      background-color: #BFDEB4;
+          background-size: 100% 100%;
+    }
+
+    .center {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      -ms-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+    }
+
+    .contain {
+      display:block;
+      width:100%; height:100%;
+      object-fit: contain;
+    }
+
+    .stretch {
+      display:block;
+      width:100%; height:100%;
+    }
+
+    .cover {
+      display:block;
+      width:100%; height:100%;
+      object-fit: cover;
+    }
+
+    .bottom {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      -ms-transform: translate(-50%, 0);
+      transform: translate(-50%, 0);
+    }
+
+    .bottomLeft {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+    }
+
+    .bottomRight {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  </style>
+  <script id="splash-screen-script">
+    function removeSplashFromWeb() {
+      document.getElementById("splash")?.remove();
+      document.getElementById("splash-branding")?.remove();
+      document.body.style.background = "transparent";
+    }
+  </script>
 </head>
+<body>
+  <picture id="splash">
+      <source srcset="splash/img/light-1x.png 1x, splash/img/light-2x.png 2x, splash/img/light-3x.png 3x, splash/img/light-4x.png 4x" media="(prefers-color-scheme: light)">
+      <source srcset="splash/img/dark-1x.png 1x, splash/img/dark-2x.png 2x, splash/img/dark-3x.png 3x, splash/img/dark-4x.png 4x" media="(prefers-color-scheme: dark)">
+      <img class="center" aria-hidden="true" src="splash/img/light-1x.png" alt="">
+  </picture>
+  <!-- CONTENUTO SEO (Verrà tradotto dallo script in JS, altrimenti resta Inglese) -->
+  <div id="seo-fallback" style="display:none;">
+    <h1>G-Scanner: The Food Scanner</h1>
+    <p>G-Scanner is a free app developed by Emanuele Ciotola that helps you instantly consult food product information by scanning barcodes. Using Open Food Facts, it offers filters for:</p>
+    <ul>
+      <li><strong>Celiac Disease:</strong> Strict filter for gluten or traces.</li>
+      <li><strong>Additives:</strong> Warning for modified starches and flavors.</li>
+      <li><strong>Lactose Intolerance:</strong> Search for milk, butter, whey, and lactose.</li>
+    </ul>
+    <p>Immediate result with a traffic light system (Green, Yellow, Red). <em>Note: For informational purposes only.</em></p>
+  </div>
+  
+  <noscript>
+    Please enable JavaScript to run G-Scanner.
+  </noscript>
 
-<body class="bg-md-sys-color-surface-light dark:bg-md-sys-color-surface-dark text-md-sys-color-onSurface-light dark:text-md-sys-color-onSurface-dark antialiased transition-colors duration-500 ease-m3 selection:bg-md-sys-color-primaryContainer-light selection:text-md-sys-color-onPrimaryContainer-light overflow-x-hidden">
+  
+  
+  <!--
+    You can customize the "flutter_bootstrap.js" script.
+    This is useful to provide a custom configuration to the Flutter loader
+    or to give the user feedback during the initialization process.
 
-    <header>
-        <!-- FLOATING NAVBAR -->
-        <nav class="fixed top-4 left-1/2 -translate-x-1/2 w-[calc(100%-2rem)] max-w-6xl bg-md-sys-color-surface-light/60 dark:bg-md-sys-color-surface-dark/60 backdrop-blur-2xl border border-[#E9E7EB] dark:border-[#2A2B2E] rounded-full px-4 py-3 flex items-center justify-between z-50 shadow-sm ease-m3 transition-all">
-            <div class="flex items-center gap-2 pl-2 cursor-pointer" onclick="window.scrollTo(0,0)">
-                <div class="w-8 h-8 text-md-sys-color-onPrimary-light dark:text-md-sys-color-onPrimary-dark rounded-full flex items-center justify-center transition-transform hover:rotate-[-31deg]">
-                    <img src="assets/logo/icon.svg" alt="G-Scanner App Logo" class="w-20px h-20px rounded-full object-cover" />
-                </div>
-                <span class="font-bold text-lg tracking-tight hidden sm:block">G-Scanner</span>
-            </div>
+    For more details:
+    * https://docs.flutter.dev/platform-integration/web/initialization
+  -->
+  <!-- Popup tracker per rilevamento rapido chiusura popup auth -->
+  <script>
+    let _activePopup = null;
+    const _originalOpen = window.open;
+    window.open = function (...args) {
+      const popup = _originalOpen.apply(window, args);
+      _activePopup = popup;
+      return popup;
+    };
+    window.isLastPopupClosed = function () {
+      return _activePopup ? _activePopup.closed : false;
+    };
+  </script>
+  <script src="flutter_bootstrap.js" async=""></script>
 
-            <div class="flex items-center gap-2 sm:gap-4">
-                <!-- Language Selector -->
-                <div class="relative" id="lang-menu-container">
-                    <button id="lang-menu-btn" class="flex items-center bg-transparent border border-[#E9E7EB] dark:border-[#2A2B2E] rounded-full px-3 py-1.5 hover:bg-[#F5F3F7] dark:hover:bg-[#242528] transition-colors cursor-pointer group" aria-expanded="false" aria-label="Select language">
-                        <span translate="no" style="--icon: url('assets/icons/language.svg')" class="svg-icon text-sm mr-1 text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark" aria-hidden="true"></span>
-                        <span class="text-sm font-medium text-md-sys-color-onSurface-light dark:text-md-sys-color-onSurface-dark pr-4">EN</span>
-                        <span id="lang-menu-chevron" translate="no" style="--icon: url('assets/icons/expand_more.svg')" class="svg-icon text-[16px] absolute right-2 pointer-events-none text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark transition-all duration-300 ease-m3" aria-hidden="true"></span>
-                    </button>
 
-                    <div id="lang-dropdown" class="absolute top-full right-0 mt-2 w-44 bg-white dark:bg-[#1B1B1E] border border-[#E9E7EB] dark:border-[#2A2B2E] rounded-[1.25rem] shadow-xl opacity-0 scale-95 pointer-events-none transition-all duration-300 ease-m3 z-50 overflow-hidden transform origin-top-right">
-                        <div class="py-2 flex flex-col">
-                            <div class="px-5 py-2.5 text-sm font-bold bg-[#E2F4E3] dark:bg-[#065314]/40 text-[#0D631B] dark:text-[#81D683] flex items-center justify-between cursor-default">
-                                English
-                                <span translate="no" style="--icon: url('assets/icons/check.svg')" class="svg-icon text-[18px]" aria-hidden="true"></span>
-                            </div>
-                            <a href="it/" class="px-5 py-2.5 text-sm font-medium hover:bg-[#F5F3F7] dark:hover:bg-[#242528] text-md-sys-color-onSurface-light dark:text-md-sys-color-onSurface-dark transition-colors flex items-center justify-between">
-                                Italiano
-                            </a>
-                            <a href="es/" class="px-5 py-2.5 text-sm font-medium hover:bg-[#F5F3F7] dark:hover:bg-[#242528] text-md-sys-color-onSurface-light dark:text-md-sys-color-onSurface-dark transition-colors flex items-center justify-between">
-                                Español
-                            </a>
-                            <a href="de/" class="px-5 py-2.5 text-sm font-medium hover:bg-[#F5F3F7] dark:hover:bg-[#242528] text-md-sys-color-onSurface-light dark:text-md-sys-color-onSurface-dark transition-colors flex items-center justify-between">
-                                Deutsch
-                            </a>
-                            <a href="fr/" class="px-5 py-2.5 text-sm font-medium hover:bg-[#F5F3F7] dark:hover:bg-[#242528] text-md-sys-color-onSurface-light dark:text-md-sys-color-onSurface-dark transition-colors flex items-center justify-between">
-                                Français
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Theme Toggle -->
-                <button id="theme-toggle" class="p-2 rounded-full flex items-center justify-center hover:bg-[#F5F3F7] dark:hover:bg-[#242528] transition-colors ease-m3" aria-label="Toggle Dark Mode">
-                    <span translate="no" style="--icon: url('assets/icons/dark_mode.svg')" class="svg-icon block dark:hidden leading-none" aria-hidden="true"></span>
-                    <span translate="no" style="--icon: url('assets/icons/light_mode.svg')" class="svg-icon hidden dark:block text-md-sys-color-primary-dark leading-none" aria-hidden="true"></span>
-                </button>
-
-                <!-- Launch App CTA -->
-                <a href="https://g-scanner.github.io/webapp/" class="hidden sm:flex bg-md-sys-color-primary-light dark:bg-md-sys-color-primary-dark text-md-sys-color-onPrimary-light dark:text-md-sys-color-onPrimary-dark px-5 py-2 rounded-full font-medium text-sm items-center gap-2 hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 transition-all ease-m3 anti-jitter">
-                    Launch WebApp
-                    <span translate="no" style="--icon: url('assets/icons/open_in_new.svg')" class="svg-icon text-[18px]" aria-hidden="true"></span>
-                </a>
-            </div>
-        </nav>
-    </header>
-
-    <main>
-
-        <!-- HERO SECTION -->
-        <header class="relative pt-40 pb-24 px-6 min-h-[95vh] flex flex-col items-center justify-center">
-            <!-- Abstract Background Blobs -->
-            <div class="absolute inset-0 z-0 pointer-events-none overflow-hidden">
-                <div class="bg-blob absolute top-[-5%] -left-20 w-[600px] h-[600px] bg-blue-100/60 dark:bg-[#003567]/30 blur-[90px] mix-blend-multiply dark:mix-blend-lighten"></div>
-                <div class="bg-blob absolute top-[43%] -right-20 w-[500px] h-[500px] bg-[#2E7D32]/25 dark:bg-[#065314]/40 blur-[100px] mix-blend-multiply dark:mix-blend-lighten" style="animation-delay: 2s;"></div>
-            </div>
-
-            <div class="relative z-10 w-full max-w-3xl mx-auto text-center mb-16">
-                <h1 class="fade-up text-5xl md:text-7xl font-bold tracking-tight mb-6 text-md-sys-color-onSurface-light dark:text-md-sys-color-onSurface-dark leading-[1.1]">
-                    The food scanner <br class="hidden sm:block" /> built to protect you.
-                </h1>
-                <p class="fade-up text-lg md:text-xl text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark mb-10 leading-relaxed" style="transition-delay: 100ms;">
-                    Instantly check products for hidden gluten, suspicious additives, or lactose.
-                    No ads. No tracking. A 100% free tool for your dietary peace of mind.
-                </p>
-
-                <div class="fade-up flex flex-col sm:flex-row items-center justify-center gap-4" style="transition-delay: 200ms;">
-                    <a href="https://g-scanner.github.io/webapp/" class="anti-jitter w-full sm:w-auto bg-md-sys-color-primary-light dark:bg-md-sys-color-primary-dark text-md-sys-color-onPrimary-light dark:text-md-sys-color-onPrimary-dark px-8 py-4 rounded-full font-semibold text-lg flex items-center justify-center gap-2 hover:shadow-lg hover:-translate-y-1 transition-all ease-m3">
-                        <span translate="no" style="--icon: url('assets/icons/globe.svg')" class="svg-icon" aria-hidden="true"></span>
-                        Start WebApp
-                    </a>
-                    <a href="#download-section" class="anti-jitter w-full sm:w-auto bg-white/50 dark:bg-[#1B1B1E]/40 backdrop-blur-md text-md-sys-color-onSurface-light dark:text-md-sys-color-onSurface-dark px-8 py-4 rounded-full font-semibold text-lg flex items-center justify-center gap-2 hover:bg-white/80 dark:hover:bg-[#242528]/80 hover:-translate-y-1 transition-all ease-m3 border border-[#E9E7EB] dark:border-[#2A2B2E]">
-                        <span translate="no" style="--icon: url('assets/icons/android.svg')" class="svg-icon" aria-hidden="true"></span>
-                        Download App
-                    </a>
-                </div>
-            </div>
-
-            <div class="relative z-10 w-full max-w-[420px] fade-up" style="transition-delay: 300ms;">
-                <div id="full-scanner-container" class="relative w-full h-[460px]">
-                    <div class="relative w-full h-full bg-white dark:bg-[#121214] rounded-[2.5rem] shadow-2xl border border-[#E9E7EB] dark:border-[#2A2B2E] overflow-hidden">
-
-                        <div id="front-ui" class="absolute inset-0 flex flex-col p-6 pb-8 front-ui origin-center z-10 bg-white dark:bg-[#121214]">
-                            <div class="text-center mb-6 mt-2">
-                                <h2 class="font-bold text-2xl md:text-3xl text-gray-900 dark:text-gray-100 tracking-tight">Scan Product</h2>
-                                <p class="text-[15px] text-gray-600 dark:text-gray-400 mt-2 leading-snug px-4">Align the barcode within the frame.</p>
-                            </div>
-
-                            <div class="relative w-full aspect-video mb-6 bg-[#000000] rounded-[2rem] overflow-hidden flex items-center justify-center shadow-inner border border-gray-800">
-                                <div class="absolute inset-0 bg-[url(assets/images/scanner-bg.webp)] bg-cover bg-center opacity-30 blur-[4px]"></div>
-                                <div class="absolute inset-4 overflow-hidden pointer-events-none z-10">
-                                    <div class="absolute top-0 left-0 w-8 h-8 border-t-[3px] border-l-[3px] border-green-500 rounded-tl-xl opacity-80"></div>
-                                    <div class="absolute top-0 right-0 w-8 h-8 border-t-[3px] border-r-[3px] border-green-500 rounded-tr-xl opacity-80"></div>
-                                    <div class="absolute bottom-0 left-0 w-8 h-8 border-b-[3px] border-l-[3px] border-green-500 rounded-bl-xl opacity-80"></div>
-                                    <div class="absolute bottom-0 right-0 w-8 h-8 border-b-[3px] border-r-[3px] border-green-500 rounded-br-xl opacity-80"></div>
-                                </div>
-                                <div id="dynamic-barcode-wrapper" class="relative z-20 bg-white/95 backdrop-blur-md px-5 py-3 rounded-2xl shadow-xl barcode-enter flex items-center justify-center h-[75px] min-w-[160px] border border-black/5">
-                                    <div id="dynamic-barcode-lines" class="flex gap-[2.5px] h-full items-center justify-center w-full"></div>
-                                </div>
-                                <div id="scanner-laser" class="absolute left-[10%] w-[80%] h-[3px] bg-green-500 shadow-[0_0_15px_#22c55e] z-30 transition-all ease-linear rounded-full" style="top: 12%; opacity: 0;"></div>
-                            </div>
-
-                            <div class="flex items-center gap-4 mb-6 px-2">
-                                <div class="h-px bg-[#E9E7EB] dark:bg-[#2A2B2E] flex-1"></div>
-                                <span class="text-[#40493D] dark:text-[#8B9389] text-sm font-medium">Or</span>
-                                <div class="h-px bg-[#E9E7EB] dark:bg-[#2A2B2E] flex-1"></div>
-                            </div>
-
-                            <div class="flex gap-3 px-2">
-                                <div class="flex-1 bg-[#F5F3F7] dark:bg-[#1B1B1E] rounded-[1.5rem] flex items-center px-5 h-[3.25rem]">
-                                    <span translate="no" style="--icon: url('assets/icons/barcode_scanner.svg')" class="svg-icon text-[#8B9389] mr-3 text-[20px]" aria-hidden="true"></span>
-                                    <span class="text-[#8B9389] text-[15px] font-medium tracking-wide" aria-disabled="true">Manual Entry...</span>
-                                </div>
-                                <button class="w-[3.25rem] h-[3.25rem] bg-[#F5F3F7] dark:bg-[#1B1B1E] rounded-full flex items-center justify-center" aria-label="Go to manual entry">
-                                    <span translate="no" style="--icon: url('assets/icons/chevron_right.svg')" class="svg-icon text-[#40493D] dark:text-[#C1C9BE]" aria-hidden="true"></span>
-                                </button>
-                            </div>
-                        </div>
-
-                        <div id="success-overlay" class="absolute inset-0 z-20 flex flex-col items-center justify-center success-overlay-enter bg-[#E2F4E3]/95 dark:bg-[#065314]/95 backdrop-blur-xl rounded-[2.5rem] border border-green-500/20">
-                            <div class="success-icon w-24 h-24 bg-[#0D631B] rounded-full flex items-center justify-center mb-6 shadow-xl shadow-[#0D631B]/30">
-                                <span translate="no" style="--icon: url('assets/icons/check.svg')" class="svg-icon text-white text-6xl" aria-hidden="true"></span>
-                            </div>
-                            <h2 class="font-extrabold text-4xl md:text-5xl tracking-tight mb-3 text-[#00390E] dark:text-[#9DF49E]">Done.</h2>
-                            <p class="text-[#0D631B] dark:text-[#81D683] text-lg font-medium text-center px-6">Safe in a split second.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </header>
-
-        <section class="py-24 bg-[#F5F3F7] dark:bg-[#151517] relative">
-            <div class="max-w-6xl mx-auto px-6 relative z-10">
-                <div class="text-center mb-16 fade-up">
-                    <h2 class="text-3xl md:text-5xl font-bold mb-4">No compromises.</h2>
-                    <p class="text-xl text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark">Your health is our only priority.</p>
-                </div>
-
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div class="fade-up m3-card bg-white dark:bg-[#1B1B1E] p-8 rounded-[2rem] border border-[#E9E7EB] dark:border-[#2A2B2E]" style="transition-delay: 100ms;">
-                        <div class="w-14 h-14 bg-[#EBF1FF] dark:bg-[#003567]/40 text-[#003567] dark:text-[#54A0FE] rounded-full flex items-center justify-center mb-6">
-                            <span translate="no" style="--icon: url('assets/icons/volunteer_activism.svg')" class="svg-icon text-3xl" aria-hidden="true"></span>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-3">100% Free Forever</h3>
-                        <p class="text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark leading-relaxed">No subscriptions, no hidden fees, and zero ads. G-Scanner is a free tool built strictly to support the celiac and food intolerance community.</p>
-                    </div>
-                    <div class="fade-up m3-card bg-white dark:bg-[#1B1B1E] p-8 rounded-[2rem] border border-[#E9E7EB] dark:border-[#2A2B2E]" style="transition-delay: 200ms;">
-                        <div class="w-14 h-14 bg-[#E2F4E3] dark:bg-[#065314]/40 text-[#0D631B] dark:text-[#81D683] rounded-full flex items-center justify-center mb-6">
-                            <span translate="no" style="--icon: url('assets/icons/shield_person.svg')" class="svg-icon text-3xl" aria-hidden="true"></span>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-3">Privacy by Design</h3>
-                        <p class="text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark leading-relaxed">Zero tracking, your data stays entirely private. Your preferences and scan history are managed transparently and fully under your control</p>
-                    </div>
-                    <div class="fade-up m3-card bg-white dark:bg-[#1B1B1E] p-8 rounded-[2rem] border border-[#E9E7EB] dark:border-[#2A2B2E]" style="transition-delay: 300ms;">
-                        <div class="w-14 h-14 bg-[#FFF0E6] dark:bg-[#5C2D00]/40 text-[#AD5600] dark:text-[#FFB68A] rounded-full flex items-center justify-center mb-6">
-                            <span translate="no" style="--icon: url('assets/icons/group.svg')" class="svg-icon text-3xl" aria-hidden="true"></span>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-3">Community Driven</h3>
-                        <p class="text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark leading-relaxed">Powered by Open Food Facts, a global database updated by thousands worldwide. Enhanced by our internal user reporting system.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-24 px-6 max-w-5xl mx-auto relative flex flex-col items-center">
-            <div class="flex flex-col md:flex-row items-center gap-16 w-full mb-12">
-                <div class="flex-1 fade-up text-center md:text-left">
-                    <h2 class="text-3xl md:text-5xl font-bold mb-6">As simple as a traffic light.</h2>
-                    <p class="text-lg text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark mb-10 leading-relaxed">Decoding complex ingredient labels can be exhausting and risky. G-Scanner condenses nutritional data into three universally understood indicators.</p>
-
-                    <div class="space-y-6 text-left">
-                        <div class="fade-up flex items-start gap-5 p-4 rounded-[1.5rem] hover:bg-[#F5F3F7] dark:hover:bg-[#1B1B1E] transition-colors" style="transition-delay: 100ms;">
-                            <div class="w-12 h-12 bg-[#E2F4E3] dark:bg-[#065314]/40 text-[#0D631B] dark:text-[#81D683] rounded-full flex items-center justify-center flex-shrink-0">
-                                <span translate="no" style="--icon: url('assets/icons/check_circle.svg')" class="svg-icon text-2xl" aria-hidden="true"></span>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold text-[#0D631B] dark:text-[#81D683]">Safe</h3>
-                                <p class="text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark mt-1">Ingredients are verified safe based on your strict dietary needs (e.g., completely gluten-free).</p>
-                            </div>
-                        </div>
-                        <div class="fade-up flex items-start gap-5 p-4 rounded-[1.5rem] hover:bg-[#F5F3F7] dark:hover:bg-[#1B1B1E] transition-colors" style="transition-delay: 200ms;">
-                            <div class="w-12 h-12 bg-[#FFF0E6] dark:bg-[#5C2D00]/40 text-[#AD5600] dark:text-[#FFB68A] rounded-full flex items-center justify-center flex-shrink-0">
-                                <span translate="no" style="--icon: url('assets/icons/warning.svg')" class="svg-icon text-2xl" aria-hidden="true"></span>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold text-[#AD5600] dark:text-[#FFB68A]">Uncertain</h3>
-                                <p class="text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark mt-1">Potential risks like factory cross-contamination. Always manually double-check the physical label.</p>
-                            </div>
-                        </div>
-                        <div class="fade-up flex items-start gap-5 p-4 rounded-[1.5rem] hover:bg-[#F5F3F7] dark:hover:bg-[#1B1B1E] transition-colors" style="transition-delay: 300ms;">
-                            <div class="w-12 h-12 bg-[#FFDAD6] dark:bg-[#93000A]/40 text-[#BA1A1A] dark:text-[#FFB4AB] rounded-full flex items-center justify-center flex-shrink-0">
-                                <span translate="no" style="--icon: url('assets/icons/cancel.svg')" class="svg-icon text-2xl" aria-hidden="true"></span>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-bold text-[#BA1A1A] dark:text-[#FFB4AB]">Forbidden</h3>
-                                <p class="text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark mt-1">Contains gluten or your restricted allergens. Strictly avoid consumption.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="flex-1 w-full flex justify-center fade-up" style="transition-delay: 200ms;">
-                    <div class="relative w-72 h-[520px] bg-white dark:bg-[#1B1B1E] rounded-[2.5rem] border-[8px] border-[#F5F3F7] dark:border-[#242528] shadow-2xl overflow-hidden flex flex-col pt-8 px-5 group">
-                        <div class="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-[#F5F3F7] dark:bg-[#242528] rounded-b-3xl"></div>
-                        <div class="w-20 h-20 bg-[#E2F4E3] dark:bg-[#065314]/40 text-[#0D631B] dark:text-[#81D683] rounded-full flex items-center justify-center mx-auto mt-6 mb-4 group-hover:scale-110 transition-transform ease-m3 duration-500">
-                            <span translate="no" style="--icon: url('assets/icons/check_circle.svg')" class="svg-icon text-4xl" aria-hidden="true"></span>
-                        </div>
-                        <h3 class="text-center font-bold text-3xl mb-1 text-[#0D631B] dark:text-[#81D683]">SAFE</h3>
-                        <p class="text-center text-sm text-gray-500 dark:text-gray-400 mb-8 font-medium">Gluten-Free Oats</p>
-
-                        <div class="bg-[#FAF9FC] dark:bg-[#121214] rounded-3xl p-5 mb-4 border border-[#E9E7EB] dark:border-[#2A2B2E]">
-                            <p class="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wide font-bold mb-3 flex items-center gap-1">
-                                <span translate="no" style="--icon: url('assets/icons/leaderboard.svg')" class="svg-icon text-[16px]" aria-hidden="true"></span> Rating
-                            </p>
-                            <p class="text-sm font-medium flex items-center gap-2">Celiac friendly</p>
-                        </div>
-                        <div class="bg-[#FAF9FC] dark:bg-[#121214] rounded-3xl p-5 border border-[#E9E7EB] dark:border-[#2A2B2E]">
-                            <p class="text-xs text-gray-500 dark:text-gray-400 uppercase tracking-wide font-bold mb-3 flex items-center gap-1">
-                                <span translate="no" style="--icon: url('assets/icons/science.svg')" class="svg-icon text-[16px]" aria-hidden="true"></span> Ingredients
-                            </p>
-                            <p class="text-sm font-medium">Organic rolled oats</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="w-full max-w-4xl fade-blur-in bg-[#F5F3F7] dark:bg-[#151517] border border-[#E9E7EB] dark:border-[#2A2B2E] p-5 md:p-6 rounded-[2rem] flex items-start gap-4 text-left">
-                <div class="space-y-1 text-xs text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark leading-relaxed">
-                    <p>
-                        G-Scanner is purely an informational tool and <strong>does not replace medical advice</strong>. Ratings 
-                        are generated based on crowdsourced data from the Open Food Facts collaborative database. You are 
-                        <strong>solely responsible</strong> for directly verifying the physical labels on products before purchase and consumption.
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- About section -->
-        <section class="py-24 bg-[#F5F3F7] dark:bg-[#151517] perspective-1000 overflow-hidden relative">
-            <div class="max-w-4xl mx-auto px-6">
-                <div class="fly-in-3d w-full">
-                    <div id="about-card" class="relative w-full transform-style-3d flip-transition cursor-pointer select-none hover-wave">
-                        
-                        <!-- Front Face -->
-                        <div class="bg-white dark:bg-[#1B1B1E] rounded-[2.5rem] p-8 md:p-12 shadow-sm border border-[#E9E7EB] dark:border-[#2A2B2E] flex flex-col md:flex-row items-center gap-10 backface-hidden z-20">
-                            <div class="w-32 h-32 md:w-36 md:h-36 flex-shrink-0 bg-[#E2F4E3] dark:bg-[#065314]/40 text-[#0D631B] dark:text-[#81D683] rounded-full flex items-center justify-center shadow-sm">
-                                <span id="waving-icon" translate="no" style="--icon: url('assets/icons/waving_hand.svg')" class="svg-icon text-7xl md:text-8xl" aria-hidden="true"></span>
-                            </div>
-                            <div class="text-center md:text-left">
-                                <h2 class="text-xs font-bold uppercase tracking-widest text-[#0D631B] dark:text-[#81D683] mb-2">Behind the project</h2>
-                                <h3 class="text-3xl font-bold mb-3 text-md-sys-color-onSurface-light dark:text-md-sys-color-onSurface-dark">Hi, I'm Emanuele.</h3>
-                                <p class="text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark leading-relaxed">
-                                    I'm a Computer Science student at the <strong>University of Naples Federico II</strong>.
-                                    I built G-Scanner out of a genuine personal need: navigating supermarket aisles shouldn't cause anxiety or require hours of label reading.
-                                </p>
-                            </div>
-                        </div>
-
-                        <!-- Back Face (Easter Egg) -->
-                        <div class="absolute inset-0 bg-gradient-to-br from-pink-50 to-rose-100 dark:from-pink-950 dark:to-rose-900 rounded-[2.5rem] p-8 md:p-12 shadow-xl border border-pink-200 dark:border-pink-800 flex flex-col items-center justify-center backface-hidden rotate-y-180 z-10 text-center">
-                            <span translate="no" style="--icon: url('assets/icons/favorite.svg')" class="svg-icon text-rose-500 dark:text-rose-400 text-6xl mb-4" aria-hidden="true"></span>
-                            <h3 class="text-2xl md:text-3xl font-bold mb-2 text-rose-900 dark:text-rose-100">G-Scanner: G for Gluten?</h3>
-                            <p class="text-rose-700 dark:text-rose-300 font-medium">For me, the G stands for Giulia.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section id="download-section" class="py-24 px-6 max-w-5xl mx-auto text-center">
-            <div class="max-w-2xl mx-auto flex flex-col items-center">
-                <span translate="no" style="--icon: url('assets/icons/install_mobile.svg')" class="pop-in svg-icon text-6xl mb-6 text-md-sys-color-primary-light dark:text-md-sys-color-primary-dark drop-shadow-sm" aria-hidden="true"></span>
-                <h2 class="fade-up text-3xl md:text-5xl font-bold mb-6" style="transition-delay: 100ms;">Take the scanner with you.</h2>
-                <p class="fade-up text-lg text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark mb-10 leading-relaxed" style="transition-delay: 200ms;">
-                    Download the APK for Android to get a blazing-fast, native experience. Minimal storage required, maximum time saved during your grocery shopping.
-                </p>
-
-                <div class="slide-up-bounce w-full flex justify-center" style="transition-delay: 300ms;">
-                    <a href="assets/apk/G-Scanner.apk" download="G-Scanner.apk" class="anti-jitter inline-flex bg-[#F5F3F7] dark:bg-[#1B1B1E] text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark px-10 py-5 rounded-full font-bold text-lg items-center justify-center gap-3 hover:bg-opacity-80 hover:-translate-y-1 transition-all ease-m3 shadow-sm border border-[#E9E7EB] dark:border-[#2A2B2E] mb-10">
-                        <span translate="no" style="--icon: url('assets/icons/android.svg')" class="svg-icon text-[24px]" aria-hidden="true"></span>
-                        Download Android APK
-                    </a>
-                </div>
-
-                <!-- Download disclaimer -->
-                <div class="fade-blur-in w-full bg-[#F5F3F7] dark:bg-[#151517] border border-[#E9E7EB] dark:border-[#2A2B2E] p-5 md:p-6 rounded-[2rem] flex items-start gap-4 text-left">
-                    <div class="space-y-1 text-xs text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark leading-relaxed">
-                        <p>
-                            Manual installation of the APK file (sideloading) is done entirely at your <strong>own risk</strong>.
-                            By proceeding with the download, you explicitly agree to our 
-                            <a href="TermsOfService.html" class="underline font-medium hover:text-md-sys-color-onSurface-light dark:hover:text-md-sys-color-onSurface-dark transition-colors">Terms of Service</a> and 
-                            <a href="PrivacyPolicy.html" class="underline font-medium hover:text-md-sys-color-onSurface-light dark:hover:text-md-sys-color-onSurface-dark transition-colors">Privacy Policy</a>.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </main>
-
-    <footer class="bg-[#F5F3F7] dark:bg-[#0E0E10] py-12 px-6 border-t border-[#E9E7EB] dark:border-[#242528] relative mt-12">
-        <div class="footer-reveal max-w-4xl mx-auto flex flex-col items-center text-center">
-            <div class="stagger-item flex items-center gap-2 mb-6 opacity-80">
-                <span class="font-bold text-xl">G-Scanner</span>
-            </div>
-
-            <div class="stagger-item flex flex-wrap justify-center gap-6 text-sm font-medium text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark mb-8">
-                <a href="TermsOfService.html" class="underline hover:text-md-sys-color-onSurface-light dark:hover:text-md-sys-color-onSurface-dark transition-colors">Terms of Service</a>
-                <a href="PrivacyPolicy.html" class="underline hover:text-md-sys-color-onSurface-light dark:hover:text-md-sys-color-onSurface-dark transition-colors">Privacy Policy</a>
-                <a href="https://world.openfoodfacts.org/" target="_blank" class="underline hover:text-md-sys-color-onSurface-light dark:hover:text-md-sys-color-onSurface-dark transition-colors">Open Food Facts</a>
-            </div>
-            <p class="stagger-item text-sm font-medium text-md-sys-color-onSurfaceVariant-light dark:text-md-sys-color-onSurfaceVariant-dark">
-                &copy; <span id="year">2026</span> Emanuele Ciotola. All rights reserved. Made in Napoli.
-            </p>
-        </div>
-    </footer>
-</body>
-</html>
+</body></html>
