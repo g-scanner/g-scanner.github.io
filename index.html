@@ -92,7 +92,10 @@ PROJECT: G-Scanner — See LICENSE file in root for terms.
     <link rel="stylesheet" href="style.css">
     
     <!-- External JS -->
-    <script> 
+    <script>
+        // Dice al CSS che JavaScript è attivo (eseguito in 0ms prima che la pagina si disegni)
+        document.documentElement.classList.add('js');
+
         // Applica il tema istantaneamente (Nessun lampo bianco)
         if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
             document.documentElement.classList.add('dark');
