@@ -66,8 +66,8 @@ PROJECT: G-Scanner — See LICENSE file in root for terms.
             
             <p class="text-sm text-gray-500 dark:text-gray-400 mb-8">
                 <strong>Versione:</strong> 1.0<br>
-                <strong>Data di entrata in vigore:</strong> 17 luglio 2026<br>
-                <strong>Data di ultimo aggiornamento:</strong> 17 luglio 2026
+                <strong>Data di entrata in vigore:</strong> 9 ottobre 2026<br>
+                <strong>Data di ultimo aggiornamento:</strong> 9 ottobre 2026
             </p>
 
             <hr class="my-8 border-gray-200 dark:border-gray-800">
@@ -233,6 +233,26 @@ PROJECT: G-Scanner — See LICENSE file in root for terms.
                 I dati memorizzati localmente rimangono sul dispositivo dell'utente fino alla loro eliminazione o alla disinstallazione dell'applicazione.
             </p>
 
+            <h3 class="text-xl font-bold mt-6 mb-3 text-gray-800 dark:text-gray-200">2.5 Database locale per l'utilizzo offline</h3>
+            <p class="mb-4 leading-relaxed">
+                G-Scanner può consentire all'utente di scaricare sul proprio dispositivo una copia locale di dati relativi ai prodotti alimentari, al fine di permettere la consultazione e la scansione dei prodotti anche in assenza di una connessione Internet.
+            </p>
+            <p class="mb-4 leading-relaxed">
+                Il database offline contiene esclusivamente informazioni relative ai prodotti alimentari necessarie al funzionamento delle funzionalità offline e non contiene dati personali dell'utente.
+            </p>
+            <p class="mb-4 leading-relaxed">
+                L'utente può scegliere tra differenti configurazioni del database offline, caratterizzate da un diverso livello di copertura e dalla conseguente diversa quantità di dati memorizzati sul dispositivo.
+            </p>
+            <p class="mb-4 leading-relaxed">
+                I dati presenti nel database offline costituiscono una copia locale dei dati disponibili al momento del relativo aggiornamento e potrebbero pertanto non riflettere eventuali modifiche o aggiornamenti successivi delle informazioni relative ai prodotti.
+            </p>
+            <p class="mb-4 leading-relaxed">
+                I dati consultati tramite il database offline non vengono automaticamente associati al profilo personale dell'utente né utilizzati per creare o aggiornare il relativo profilo.
+            </p>
+            <p class="mb-4 leading-relaxed">
+                Il database offline può essere aggiornato o eliminato dall'utente mediante le funzionalità messe a disposizione dall'applicazione.
+            </p>
+
             <hr class="my-8 border-gray-200 dark:border-gray-800">
 
             <h2 class="text-2xl font-bold mt-10 mb-4 text-gray-900 dark:text-gray-100">3. Dati appartenenti a categorie particolari (Art. 9 GDPR)</h2>
@@ -284,6 +304,7 @@ PROJECT: G-Scanner — See LICENSE file in root for terms.
             <p class="mb-2 leading-relaxed">I dati personali raccolti attraverso G-Scanner sono trattati per le seguenti finalità:</p>
             <ul class="list-disc pl-6 mb-4 space-y-1">
                 <li>consentire la scansione dei codici a barre e la consultazione delle informazioni relative ai prodotti alimentari;</li>
+                <li>consentire la consultazione delle informazioni relative ai prodotti anche in assenza di una connessione Internet, mediante l'eventuale database locale scaricato dall'utente;</li>
                 <li>permettere la personalizzazione dell'esperienza dell'utente tramite la configurazione delle preferenze alimentari e delle impostazioni dell'applicazione;</li>
                 <li>consentire agli utenti autenticati la sincronizzazione dei dati tra dispositivi diversi;</li>
                 <li>permettere la partecipazione alla community attraverso l'invio, la gestione e la consultazione delle segnalazioni relative ai prodotti;</li>
@@ -319,10 +340,10 @@ PROJECT: G-Scanner — See LICENSE file in root for terms.
 
             <hr class="my-8 border-gray-200 dark:border-gray-800">
 
-            <h2 class="text-2xl font-bold mt-10 mb-4 text-gray-900 dark:text-gray-100">7. Permessi richiesti dall'applicazione</h2>
+            <h2 class="text-2xl font-bold mt-10 mb-4 text-gray-900 dark:text-gray-100">7. Accesso a funzionalità e informazioni del dispositivo</h2>
             
             <p class="mb-4 leading-relaxed">
-                Per garantire il corretto funzionamento delle funzionalità offerte, G-Scanner può richiedere alcuni permessi del dispositivo dell'utente.
+                Per garantire il corretto funzionamento delle funzionalità offerte, G-Scanner può accedere ad alcune funzionalità e informazioni del dispositivo dell'utente.
             </p>
 
             <h3 class="text-xl font-bold mt-6 mb-3 text-gray-800 dark:text-gray-200">Fotocamera</h3>
@@ -334,31 +355,36 @@ PROJECT: G-Scanner — See LICENSE file in root for terms.
             </p>
 
             <h3 class="text-xl font-bold mt-6 mb-3 text-gray-800 dark:text-gray-200">Connessione Internet</h3>
-            <p class="mb-2 leading-relaxed">La connessione Internet è necessaria per:</p>
+            <p class="mb-4 leading-relaxed">
+                L'applicazione verifica, ove necessario, la disponibilità della connessione Internet al fine di determinare se le funzionalità che richiedono l'accesso ai servizi online possano essere utilizzate.
+            </p>
+            <p class="mb-2 leading-relaxed">La connessione Internet è necessaria, in particolare, per:</p>
             <ul class="list-disc pl-6 mb-4 space-y-1">
                 <li>effettuare l'autenticazione tramite i provider supportati;</li>
                 <li>sincronizzare i dati degli utenti autenticati;</li>
                 <li>accedere ai servizi cloud utilizzati dall'applicazione;</li>
+                <li>recuperare e aggiornare le informazioni sui prodotti mediante i servizi online;</li>
                 <li>consentire il funzionamento delle funzionalità basate sui dati della community.</li>
             </ul>
+            <p class="mb-4 leading-relaxed">
+                Lo stato della connessione viene utilizzato esclusivamente per la gestione tecnica delle funzionalità dell'applicazione e non viene raccolto, conservato o utilizzato per finalità di profilazione o tracciamento.
+            </p>
 
             <h3 class="text-xl font-bold mt-6 mb-3 text-gray-800 dark:text-gray-200">Tema di sistema</h3>
             <p class="mb-4 leading-relaxed">
                 Il permesso relativo al tema di sistema viene utilizzato esclusivamente per adattare automaticamente l'interfaccia grafica dell'applicazione alla modalità chiara o scura configurata sul dispositivo dell'utente.
             </p>
 
-            <h3 class="text-xl font-bold mt-6 mb-3 text-gray-800 dark:text-gray-200">Posizione geografica approssimativa di sistema</h3>
+            <h3 class="text-xl font-bold mt-6 mb-3 text-gray-800 dark:text-gray-200">Lingua del dispositivo e lingua dell'interfaccia</h3>
             <p class="mb-4 leading-relaxed">
-                L'applicazione utilizza esclusivamente la posizione geografica approssimativa fornita dal sistema operativo <strong>soltanto al primo avvio dell'applicazione</strong>, esclusivamente allo scopo di determinare automaticamente la lingua dell'interfaccia.
+                Al primo avvio, l'applicazione può leggere la lingua configurata sul dispositivo al fine di determinare automaticamente la lingua dell'interfaccia dell'applicazione.
             </p>
-            <p class="mb-2 leading-relaxed">Tale informazione:</p>
-            <ul class="list-disc pl-6 mb-4 space-y-1">
-                <li>viene elaborata esclusivamente sul dispositivo;</li>
-                <li>non comporta l'accesso alla posizione GPS precisa;</li>
-                <li>non viene salvata;</li>
-                <li>non viene trasmessa ai server;</li>
-                <li>non viene utilizzata per attività di profilazione o tracciamento.</li>
-            </ul>
+            <p class="mb-4 leading-relaxed">
+                La lingua così determinata viene utilizzata per configurare l'interfaccia dell'applicazione e, per gli utenti autenticati, può essere salvata nel database associato all'account al fine di mantenere la preferenza e sincronizzarla tra i dispositivi.
+            </p>
+            <p class="mb-4 leading-relaxed">
+                La lingua dell'interfaccia non viene utilizzata per finalità di profilazione, tracciamento o pubblicità.
+            </p>
 
             <hr class="my-8 border-gray-200 dark:border-gray-800">
 
@@ -404,7 +430,21 @@ PROJECT: G-Scanner — See LICENSE file in root for terms.
                 Le segnalazioni relative ai prodotti inviate alla community costituiscono un trattamento distinto e vengono invece conservate nel database cloud dell'applicazione per consentirne la consultazione da parte degli altri utenti.
             </p>
 
-            <h3 class="text-xl font-bold mt-6 mb-3 text-gray-800 dark:text-gray-200">9.2 Utenti autenticati</h3>
+            <h3 class="text-xl font-bold mt-6 mb-3 text-gray-800 dark:text-gray-200">9.2 Database locale per l'utilizzo offline</h3>
+            <p class="mb-2 leading-relaxed">
+                I dati relativi ai prodotti contenuti nel database offline vengono conservati localmente sul dispositivo fino a quando l'utente:
+            </p>
+            <ul class="list-disc pl-6 mb-4 space-y-1">
+                <li>elimina il database tramite le funzionalità disponibili nell'applicazione;</li>
+                <li>sostituisce il database con una diversa configurazione;</li>
+                <li>disinstalla l'applicazione;</li>
+                <li>elimina i relativi dati locali, ove previsto dal sistema operativo.</li>
+            </ul>
+            <p class="mb-4 leading-relaxed">
+                Il database offline può essere aggiornato periodicamente. La versione disponibile sul dispositivo potrebbe pertanto non coincidere con la versione più recente dei dati disponibili online.
+            </p>
+
+            <h3 class="text-xl font-bold mt-6 mb-3 text-gray-800 dark:text-gray-200">9.3 Utenti autenticati</h3>
             <p class="mb-2 leading-relaxed">
                 Per gli utenti autenticati i dati vengono conservati mediante una modalità di <strong>doppia memorizzazione</strong>:
             </p>
