@@ -66,8 +66,8 @@ PROJECT: G-Scanner — See LICENSE file in root for terms.
             
             <p class="text-sm text-gray-500 dark:text-gray-400 mb-8">
                 <strong>Version :</strong> 1.0<br>
-                <strong>Date d'entrée en vigueur :</strong> 17 juillet 2026<br>
-                <strong>Date de dernière mise à jour :</strong> 17 juillet 2026
+                <strong>Date d'entrée en vigueur :</strong> 9 octobre 2026<br>
+                <strong>Date de dernière mise à jour :</strong> 9 octobre 2026
             </p>
 
             <hr class="my-8 border-gray-200 dark:border-gray-800">
@@ -233,6 +233,26 @@ PROJECT: G-Scanner — See LICENSE file in root for terms.
                 Les données stockées localement restent sur l'appareil de l'utilisateur jusqu'à leur suppression ou la désinstallation de l'application.
             </p>
 
+            <h3 class="text-xl font-bold mt-6 mb-3 text-gray-800 dark:text-gray-200">2.5 Base de données locale pour l'utilisation hors ligne</h3>
+            <p class="mb-4 leading-relaxed">
+                G-Scanner peut permettre à l'utilisateur de télécharger sur son appareil une copie locale de données relatives aux produits alimentaires, afin de permettre la consultation et le scannage des produits même en l'absence de connexion Internet.
+            </p>
+            <p class="mb-4 leading-relaxed">
+                La base de données hors ligne contient exclusivement des informations relatives aux produits alimentaires nécessaires au fonctionnement des fonctionnalités hors ligne et ne contient aucune donnée personnelle de l'utilisateur.
+            </p>
+            <p class="mb-4 leading-relaxed">
+                L'utilisateur peut choisir entre différentes configurations de la base de données hors ligne, caractérisées par un niveau de couverture distinct et une quantité de données stockées sur l'appareil différente.
+            </p>
+            <p class="mb-4 leading-relaxed">
+                Les données présentes dans la base de données hors ligne constituent une copie locale des données disponibles au moment de leur mise à jour et peuvent donc ne pas refléter les modifications ou mises à jour ultérieures des informations relatives aux produits.
+            </p>
+            <p class="mb-4 leading-relaxed">
+                Les données consultées via la base de données hors ligne ne sont pas automatiquement associées au profil personnel de l'utilisateur, ni utilisées pour créer ou mettre à jour son profil.
+            </p>
+            <p class="mb-4 leading-relaxed">
+                La base de données hors ligne peut être mise à jour ou supprimée par l'utilisateur via les fonctionnalités mises à disposition par l'application.
+            </p>
+
             <hr class="my-8 border-gray-200 dark:border-gray-800">
 
             <h2 class="text-2xl font-bold mt-10 mb-4 text-gray-900 dark:text-gray-100">3. Données appartenant à des catégories particulières (Art. 9 RGPD)</h2>
@@ -284,6 +304,7 @@ PROJECT: G-Scanner — See LICENSE file in root for terms.
             <p class="mb-2 leading-relaxed">Les données personnelles collectées via G-Scanner sont traitées pour les finalités suivantes :</p>
             <ul class="list-disc pl-6 mb-4 space-y-1">
                 <li>permettre le scannage des codes-barres et la consultation des informations relatives aux produits alimentaires ;</li>
+                <li>permettre la consultation des informations relatives aux produits même en l'absence de connexion Internet, au moyen de l'éventuelle base de données locale téléchargée par l'utilisateur ;</li>
                 <li>permettre la personnalisation de l'expérience de l'utilisateur via la configuration des préférences alimentaires et des paramètres de l'application ;</li>
                 <li>permettre aux utilisateurs authentifiés de synchroniser les données entre différents appareils ;</li>
                 <li>permettre la participation à la communauté via l'envoi, la gestion et la consultation des signalements relatifs aux produits ;</li>
@@ -319,10 +340,10 @@ PROJECT: G-Scanner — See LICENSE file in root for terms.
 
             <hr class="my-8 border-gray-200 dark:border-gray-800">
 
-            <h2 class="text-2xl font-bold mt-10 mb-4 text-gray-900 dark:text-gray-100">7. Autorisations requises par l'application</h2>
+            <h2 class="text-2xl font-bold mt-10 mb-4 text-gray-900 dark:text-gray-100">7. Accès aux fonctionnalités et informations de l'appareil</h2>
             
             <p class="mb-4 leading-relaxed">
-                Pour garantir le bon fonctionnement des fonctionnalités proposées, G-Scanner peut demander certaines autorisations de l'appareil de l'utilisateur.
+                Pour garantir le bon fonctionnement des fonctionnalités proposées, G-Scanner peut accéder à certaines fonctionnalités et informations de l'appareil de l'utilisateur.
             </p>
 
             <h3 class="text-xl font-bold mt-6 mb-3 text-gray-800 dark:text-gray-200">Appareil photo</h3>
@@ -334,31 +355,36 @@ PROJECT: G-Scanner — See LICENSE file in root for terms.
             </p>
 
             <h3 class="text-xl font-bold mt-6 mb-3 text-gray-800 dark:text-gray-200">Connexion Internet</h3>
-            <p class="mb-2 leading-relaxed">La connexion Internet est nécessaire pour :</p>
+            <p class="mb-4 leading-relaxed">
+                L'application vérifie, si nécessaire, la disponibilité de la connexion Internet afin de déterminer si les fonctionnalités nécessitant l'accès aux services en ligne peuvent être utilisées.
+            </p>
+            <p class="mb-2 leading-relaxed">La connexion Internet est nécessaire, en particulier, pour :</p>
             <ul class="list-disc pl-6 mb-4 space-y-1">
                 <li>effectuer l'authentification via les fournisseurs pris en charge ;</li>
                 <li>synchroniser les données des utilisateurs authentifiés ;</li>
                 <li>accéder aux services cloud utilisés par l'application ;</li>
+                <li>récupérer et mettre à jour les informations sur les produits au moyen des services en ligne ;</li>
                 <li>permettre le fonctionnement des fonctionnalités basées sur les données de la communauté.</li>
             </ul>
+            <p class="mb-4 leading-relaxed">
+                L'état de la connexion est utilisé exclusivement pour la gestion technique des fonctionnalités de l'application et n'est ni collecté, ni conservé, ni utilisé à des fins de profilage ou de traçage.
+            </p>
 
             <h3 class="text-xl font-bold mt-6 mb-3 text-gray-800 dark:text-gray-200">Thème du système</h3>
             <p class="mb-4 leading-relaxed">
                 L'autorisation relative au thème du système est utilisée exclusivement pour adapter automatiquement l'interface graphique de l'application au mode clair ou sombre configuré sur l'appareil de l'utilisateur.
             </p>
 
-            <h3 class="text-xl font-bold mt-6 mb-3 text-gray-800 dark:text-gray-200">Position géographique approximative du système</h3>
+            <h3 class="text-xl font-bold mt-6 mb-3 text-gray-800 dark:text-gray-200">Langue de l'appareil et langue de l'interface</h3>
             <p class="mb-4 leading-relaxed">
-                L'application utilise exclusivement la position géographique approximative fournie par le système d'exploitation <strong>uniquement au premier lancement de l'application</strong>, dans le seul but de déterminer automatiquement la langue de l'interface.
+                Au premier lancement, l'application peut lire la langue configurée sur l'appareil afin de déterminer automatiquement la langue de l'interface de l'application.
             </p>
-            <p class="mb-2 leading-relaxed">Cette information :</p>
-            <ul class="list-disc pl-6 mb-4 space-y-1">
-                <li>est traitée exclusivement sur l'appareil ;</li>
-                <li>ne comporte pas l'accès au positionnement GPS précis ;</li>
-                <li>n'est pas sauvegardée ;</li>
-                <li>n'est pas transmise aux serveurs ;</li>
-                <li>n'est pas utilisée à des fins de profilage ou de traçage.</li>
-            </ul>
+            <p class="mb-4 leading-relaxed">
+                La langue ainsi déterminée est utilisée pour configurer l'interface de l'application et, pour les utilisateurs authentifiés, peut être enregistrée dans la base de données associée au compte afin de conserver cette préférence et de la synchroniser entre les appareils.
+            </p>
+            <p class="mb-4 leading-relaxed">
+                La langue de l'interface n'est pas utilisée à des fins de profilage, de traçage ou de publicité.
+            </p>
 
             <hr class="my-8 border-gray-200 dark:border-gray-800">
 
@@ -404,7 +430,21 @@ PROJECT: G-Scanner — See LICENSE file in root for terms.
                 Les signalements relatifs aux produits envoyés à la communauté constituent un traitement distinct et sont quant à eux conservés dans la base de données cloud de l'application pour en permettre la consultation par les autres utilisateurs.
             </p>
 
-            <h3 class="text-xl font-bold mt-6 mb-3 text-gray-800 dark:text-gray-200">9.2 Utilisateurs authentifiés</h3>
+            <h3 class="text-xl font-bold mt-6 mb-3 text-gray-800 dark:text-gray-200">9.2 Base de données locale pour l'utilisation hors ligne</h3>
+            <p class="mb-2 leading-relaxed">
+                Les données relatives aux produits contenues dans la base de données hors ligne sont conservées localement sur l'appareil jusqu'à ce que l'utilisateur :
+            </p>
+            <ul class="list-disc pl-6 mb-4 space-y-1">
+                <li>supprime la base de données via les fonctionnalités disponibles dans l'application ;</li>
+                <li>remplace la base de données par une configuration différente ;</li>
+                <li>désinstalle l'application ;</li>
+                <li>efface les données locales correspondantes, lorsque le système d'exploitation le prévoit.</li>
+            </ul>
+            <p class="mb-4 leading-relaxed">
+                La base de données hors ligne peut être mise à jour périodiquement. La version disponible sur l'appareil pourrait donc ne pas coïncider avec la version la plus récente des données disponibles en ligne.
+            </p>
+
+            <h3 class="text-xl font-bold mt-6 mb-3 text-gray-800 dark:text-gray-200">9.3 Utilisateurs authentifiés</h3>
             <p class="mb-2 leading-relaxed">
                 Pour les utilisateurs authentifiés, les données sont conservées selon un mode de <strong>double stockage</strong> :
             </p>
